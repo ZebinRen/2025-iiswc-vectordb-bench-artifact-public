@@ -77,8 +77,10 @@ pip install lancedb pandas
 Clone this repository:
 
 ```bash
-git clone
+git clone https://github.com/ZebinRen/2025-iiswc-vectordb-bench-artifact-public
 ```
+
+This artifact can also be accessed via Zenodo: [https://doi.org/10.5281/zenodo.16916496](https://doi.org/10.5281/zenodo.16916496).
 
 We use a dedicated NVMe SSD to store the database, such as the vector data and indexes, to avoid the interference from other workloads such as the operating system.
 Before building the indexes, create the root directory for all the databases.
@@ -449,7 +451,7 @@ sudo -E $PYTHON_BIN milvus-diskann-var-bwidth-io-trace.py --case-type openai-5m 
 
 We also provide all the traces, which can be used to plot the results with the existing traces. All the traces from the papers are under results directory.
 
-Note: Due to the file size limitation, the I/O traces are not included in this github repository. The I/O traces can be downloaded from the [xx](hx).
+Note: Due to the file size limitation, the I/O traces are not included in this github repository. The I/O traces can be downloaded from the Zenodo: [https://doi.org/10.5281/zenodo.16916496](https://doi.org/10.5281/zenodo.16916496).
 
 Plot the figures with existing traces:
 
