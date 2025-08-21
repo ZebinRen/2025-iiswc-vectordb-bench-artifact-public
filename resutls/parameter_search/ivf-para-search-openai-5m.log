@@ -1,0 +1,31 @@
+nohup: ignoring input
+[INFO] Starting parameter search for IVF k-probe...
+[INFO] min probe = 1
+[INFO] max probe = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 1 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-1.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 100 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-100.txt 2>&1
+[RESULT] probe = 1, recall = 0.5397
+[RESULT] probe = 100, recall = 0.9869
+[INFO] Testing probe = 50
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 50 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-50.txt 2>&1
+[RESULT] probe = 50, recall = 0.9738
+[INFO] Testing probe = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 25 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-25.txt 2>&1
+[RESULT] probe = 25, recall = 0.9537
+[INFO] Testing probe = 13
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 13 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-13.txt 2>&1
+[RESULT] probe = 13, recall = 0.9162
+[INFO] Testing probe = 7
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 7 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-7.txt 2>&1
+[RESULT] probe = 7, recall = 0.8672
+[INFO] evaluate probe_min = cur_probe + 1 = 8
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 8 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-8.txt 2>&1
+[RESULT] probe_min = 8, recall = 0.8791
+[INFO] Testing probe = 10
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 10 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-10.txt 2>&1
+[RESULT] probe = 10, recall = 0.8958
+[INFO] evaluate probe_min = cur_probe + 1 = 11
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19534 --password "" --lists 8944 --probes 11 > results-ivf-para-search-kprobe-Performance1536D5M/ivf-para-search-Performance1536D5M-probe-11.txt 2>&1
+[RESULT] probe_min = 11, recall = 0.904
+[INFO] Final probe value: probe = 11, recall = 0.904
+[INFO] Final probe value: probe = 13, recall = 0.9162

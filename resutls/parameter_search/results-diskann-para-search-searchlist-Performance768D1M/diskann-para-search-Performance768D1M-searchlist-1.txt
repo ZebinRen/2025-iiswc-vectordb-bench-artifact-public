@@ -1,0 +1,201 @@
+2025-05-31 21:24:31,286 | [92mINFO[0m: [92mTask:
+TaskConfig(db=<DB.Milvus: 'Milvus'>, db_config=MilvusConfig(db_label='milvus_diskann_cohere_1m', version='', note='', uri=SecretStr('**********'), user=None, password=SecretStr('')), db_case_config=DISKANNConfig(index=<IndexType.DISKANN: 'DISKANN'>, metric_type=None, search_list=1), case_config=CaseConfig(case_id=<CaseType.Performance768D1M: 5>, custom_case={}, k=10, concurrency_search_config=ConcurrencySearchConfig(num_concurrency=[1], concurrency_duration=30)), stages=['search_serial', 'search_concurrent'])
+[0m (cli.py:503) (2354284)
+2025-05-31 21:24:31,287 | [92mINFO[0m: [92mgenerated uuid for the tasks: b2529e0f31ce4c18af3509cb2c71088e[0m (interface.py:72) (2354284)
+2025-05-31 21:24:31,379 | INFO | DB             | CaseType     Dataset               Filter | task_label (task_runner.py:339)
+2025-05-31 21:24:31,380 | INFO | -----------    | ------------ -------------------- ------- | -------    (task_runner.py:339)
+2025-05-31 21:24:31,380 | INFO | Milvus-milvus_diskann_cohere_1m | Performance  Cohere-MEDIUM-1M        None | b2529e0f31ce4c18af3509cb2c71088e (task_runner.py:339)
+2025-05-31 21:24:31,380 | [92mINFO[0m: [92mtask submitted: id=b2529e0f31ce4c18af3509cb2c71088e, b2529e0f31ce4c18af3509cb2c71088e, case number: 1[0m (interface.py:242) (2354284)
+2025-05-31 21:24:32,131 | [92mINFO[0m: [92m[1/1] start case: {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'Cohere', 'size': 1000000, 'dim': 768, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'Milvus-milvus_diskann_cohere_1m'}, drop_old=False[0m (interface.py:172) (2354307)
+2025-05-31 21:24:32,131 | [92mINFO[0m: [92mStarting run[0m (task_runner.py:105) (2354307)
+2025-05-31 21:24:33,645 | [92mINFO[0m: [92mRead the entire file into memory: test.parquet[0m (dataset.py:247) (2354307)
+2025-05-31 21:24:33,693 | [92mINFO[0m: [92mRead the entire file into memory: neighbors.parquet[0m (dataset.py:247) (2354307)
+2025-05-31 21:24:33,757 | [92mINFO[0m: [92mStart performance case[0m (task_runner.py:147) (2354307)
+2025-05-31 21:24:34,587 | [92mINFO[0m: [92mStart search 30s in concurrency 1, filters: None[0m (mp_runner.py:114) (2354307)
+2025-05-31 21:24:35,626 | [92mINFO[0m: [92mSyncing all process and start concurrency search, concurrency=1[0m (mp_runner.py:123) (2354307)
+2025-05-31 21:24:36,412 [ERROR][handler]: RPC error: [search], <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>, <Time:{'RPC start': '2025-05-31 21:24:35.787201', 'RPC error': '2025-05-31 21:24:36.412715'}> (decorators.py:140)
+2025-05-31 21:24:36,413 | [93mWARNING[0m: [93mVectorDB search_embedding error: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>[0m (mp_runner.py:71) (2354411)
+Traceback (most recent call last):
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 65, in search
+    self.db.search_embedding(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        test_data[idx],
+        ^^^^^^^^^^^^^^^
+        self.k,
+        ^^^^^^^
+        self.filters,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/clients/milvus/milvus.py", line 192, in search_embedding
+    res = self.col.search(
+        data=[query],
+    ...<3 lines>...
+        expr=expr,
+    )
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/orm/collection.py", line 800, in search
+    resp = conn.search(
+        self._name,
+    ...<10 lines>...
+        **kwargs,
+    )
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 141, in handler
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 137, in handler
+    return func(*args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 176, in handler
+    return func(self, *args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 116, in handler
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 86, in handler
+    return func(*args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 900, in search
+    return self._execute_search(request, timeout, round_decimal=round_decimal, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 841, in _execute_search
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 830, in _execute_search
+    check_status(response.status)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/utils.py", line 64, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>
+2025-05-31 21:24:36,850 | [93mWARNING[0m: [93mFail to search, concurrencies: [1], max_qps before failure=0, reason=<MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>[0m (mp_runner.py:143) (2354307)
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/process.py", line 254, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 73, in search
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 65, in search
+    self.db.search_embedding(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        test_data[idx],
+        ^^^^^^^^^^^^^^^
+        self.k,
+        ^^^^^^^
+        self.filters,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/clients/milvus/milvus.py", line 192, in search_embedding
+    res = self.col.search(
+        data=[query],
+    ...<3 lines>...
+        expr=expr,
+    )
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/orm/collection.py", line 800, in search
+    resp = conn.search(
+        self._name,
+    ...<10 lines>...
+        **kwargs,
+    )
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 141, in handler
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 137, in handler
+    return func(*args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 176, in handler
+    return func(self, *args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 116, in handler
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/decorators.py", line 86, in handler
+    return func(*args, **kwargs)
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 900, in search
+    return self._execute_search(request, timeout, round_decimal=round_decimal, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 841, in _execute_search
+    raise e from e
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/grpc_handler.py", line 830, in _execute_search
+    check_status(response.status)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/pymilvus/client/utils.py", line 64, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 126, in _run_all_concurrencies_mem_efficient
+    all_count = sum([r.result()[0] for r in future_iter])
+                     ~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+pymilvus.exceptions.MilvusException: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>
+2025-05-31 21:24:36,852 | [93mWARNING[0m: [93msearch error: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>, <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>[0m (task_runner.py:231) (2354307)
+2025-05-31 21:24:36,852 | [93mWARNING[0m: [93mFailed to run performance case, reason = <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>[0m (task_runner.py:182) (2354307)
+Traceback (most recent call last):
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 165, in _run_perf_case
+    search_results = self._conc_search()
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 232, in _conc_search
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 229, in _conc_search
+    return self.search_runner.run()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 168, in run
+    return self._run_all_concurrencies_mem_efficient()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 150, in _run_all_concurrencies_mem_efficient
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 126, in _run_all_concurrencies_mem_efficient
+    all_count = sum([r.result()[0] for r in future_iter])
+                     ~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+pymilvus.exceptions.MilvusException: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>
+2025-05-31 21:24:36,854 | [93mWARNING[0m: [93m[1/1] case {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'Cohere', 'size': 1000000, 'dim': 768, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'Milvus-milvus_diskann_cohere_1m'} failed to run, reason=<MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>[0m (interface.py:194) (2354307)
+Traceback (most recent call last):
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/interface.py", line 173, in _async_task_v2
+    case_res.metrics = runner.run(drop_old)
+                       ~~~~~~~~~~^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 112, in run
+    return self._run_perf_case(drop_old)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 184, in _run_perf_case
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 165, in _run_perf_case
+    search_results = self._conc_search()
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 232, in _conc_search
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/task_runner.py", line 229, in _conc_search
+    return self.search_runner.run()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 168, in run
+    return self._run_all_concurrencies_mem_efficient()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 150, in _run_all_concurrencies_mem_efficient
+    raise e from None
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/backend/runner/mp_runner.py", line 126, in _run_all_concurrencies_mem_efficient
+    all_count = sum([r.result()[0] for r in future_iter])
+                     ~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+pymilvus.exceptions.MilvusException: <MilvusException: (code=65535, message=fail to search on QueryNode 2: worker(2) query failed: Operator::GetOutput failed for [Operator:PhyVectorSearchNode, plan node id: 5] :  => failed to search: out of range in json: search_list_size(1) should be larger than k(10) at /workspace/source/internal/core/src/index/VectorDiskIndex.cpp:284
+)>
+2025-05-31 21:24:36,856 | INFO |Task summary: run_id=b2529, task_label=b2529e0f31ce4c18af3509cb2c71088e (models.py:353)
+2025-05-31 21:24:36,856 | INFO |DB     | db_label                    case              label                            | load_dur    qps        latency(p99)    recall        max_load_count | label (models.py:353)
+2025-05-31 21:24:36,856 | INFO |------ | --------------------------- ----------------- -------------------------------- | ----------- ---------- --------------- ------------- -------------- | ----- (models.py:353)
+2025-05-31 21:24:36,856 | INFO |Milvus | milvus_diskann_cohere_1m    Performance768D1M b2529e0f31ce4c18af3509cb2c71088e | 0.0         0.0        0.0             0.0           0              | x     (models.py:353)
+2025-05-31 21:24:36,856 | [92mINFO[0m: [92mwrite results to disk /home/zebin/anaconda3/envs/vectordb-bench/lib/python3.13/site-packages/vectordb_bench/results/Milvus/result_20250531_b2529e0f31ce4c18af3509cb2c71088e_milvus.json[0m (models.py:227) (2354307)
+2025-05-31 21:24:36,857 | [92mINFO[0m: [92mSuccess to finish task: label=b2529e0f31ce4c18af3509cb2c71088e, run_id=b2529e0f31ce4c18af3509cb2c71088e[0m (interface.py:213) (2354307)

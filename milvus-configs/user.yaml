@@ -1,0 +1,6 @@
+common:
+  DiskIndex:
+    BeamWidthRatio: 6
+queryNode:
+  scheduler:
+    maxReadConcurrentRatio: 100

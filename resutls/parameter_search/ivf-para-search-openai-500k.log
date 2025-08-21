@@ -1,0 +1,34 @@
+nohup: ignoring input
+[INFO] Starting parameter search for IVF k-probe...
+[INFO] min probe = 1
+[INFO] max probe = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 1 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-1.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 100 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-100.txt 2>&1
+[RESULT] probe = 1, recall = 0.4895
+[RESULT] probe = 100, recall = 0.9805
+[INFO] Testing probe = 50
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 50 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-50.txt 2>&1
+[RESULT] probe = 50, recall = 0.9608
+[INFO] Testing probe = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 25 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-25.txt 2>&1
+[RESULT] probe = 25, recall = 0.9269
+[INFO] Testing probe = 13
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 13 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-13.txt 2>&1
+[RESULT] probe = 13, recall = 0.8868
+[INFO] evaluate probe_min = cur_probe + 1 = 14
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 14 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-14.txt 2>&1
+[RESULT] probe_min = 14, recall = 0.8929
+[INFO] Testing probe = 19
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 19 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-19.txt 2>&1
+[RESULT] probe = 19, recall = 0.9121
+[INFO] Testing probe = 16
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 16 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-16.txt 2>&1
+[RESULT] probe = 16, recall = 0.9011
+[INFO] Testing probe = 15
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 15 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-15.txt 2>&1
+[RESULT] probe = 15, recall = 0.8969
+[INFO] evaluate probe_min = cur_probe + 1 = 16
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_openai_500k --case-type Performance1536D500K --k 10 --num-concurrency 1 --uri http://localhost:19533 --password "" --lists 2828 --probes 16 > results-ivf-para-search-kprobe-Performance1536D500K/ivf-para-search-Performance1536D500K-probe-16.txt 2>&1
+[RESULT] probe_min = 16, recall = 0.9011
+[INFO] Final probe value: probe = 16, recall = 0.9011
+[INFO] Final probe value: probe = 16, recall = 0.9011

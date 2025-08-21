@@ -1,0 +1,23 @@
+nr_file_pages 1000113
+1
+nr_file_pages 181972
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 0)/ // Match major=259, minor=0
+           ~~
+Running with root privileges.
+Result directory already exists: results-io-trace/milvus-diskann-cohere-10m-con-8
+Result directory already exists: figures-io-trace/milvus-diskann-cohere-10m-con-8
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace/milvus-diskann-cohere-10m-con-8/bio-trace-cohere-10m-con-8-k-10-searchlist-10.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D10M  --db-label milvus_diskann_cohere_10m --k 10 --num-concurrency 8 --uri http://localhost:19540 --password '' --search-list 10 > results-io-trace/milvus-diskann-cohere-10m-con-8/vdb-bench-cohere-10m-con-8-k-10-searchlist-10.log 2>&1
+Execution finished, start parsing.
+vdb_start_offset_in_trace: 13.0
+vdb_end_offset_in_trace: 43.0
+read bandwidth: [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19412, 420248, 423732, 417452, 417000, 422268, 425328, 438472, 435240, 395140, 410408, 410476, 403876, 407708, 393672, 396304, 410320, 382812, 369896, 403260, 374960, 385096, 403620, 388964, 384744, 387168, 392528, 378728, 391428, 372732, 230992, 0, 90992, 134104, 131116, 136632, 129388, 111544]
+dict_keys(['ALL_READS', 'ALL_WRITES', 'R', 'WS', 'FF', 'RA', 'WFS', 'RM', 'WM', 'W'])
+TYPE 1 FONTS ENABLED
+{'ts': [109590, 109590, 109592, 109592, 109593, 109594, 109595, 109596, 109597, 109598, 109599, 109600, 109601, 109602, 109604, 109605, 109606, 109607, 109608, 109609, 109610, 109611, 109612, 109613, 109614, 109615, 109616, 109617, 109618, 109619, 109620, 109621, 109622, 109623, 109624, 109625, 109626, 109627, 109628, 109629, 109630, 109631, 109632, 109633, 109634, 109634, 109636, 109637, 109638, 109639, 109640, 109641], 'size': [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19412, 420248, 423732, 417452, 417000, 422268, 425328, 438472, 435240, 395140, 410408, 410476, 403876, 407708, 393672, 396304, 410320, 382812, 369896, 403260, 374960, 385096, 403620, 388964, 384744, 387168, 392528, 378728, 391428, 372732, 230992, 0, 90992, 134104, 131116, 136632, 129388, 111544], 'qps': 0}
+[0.0, 0.0, 0.00390625, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 18.95703125, 410.3984375, 413.80078125, 407.66796875, 407.2265625, 412.37109375, 415.359375, 428.1953125, 425.0390625, 385.87890625, 400.7890625, 400.85546875, 394.41015625, 398.15234375, 384.4453125, 387.015625, 400.703125, 373.83984375, 361.2265625, 393.80859375, 366.171875, 376.0703125, 394.16015625, 379.84765625, 375.7265625, 378.09375, 383.328125, 369.8515625, 382.25390625, 363.99609375, 225.578125, 0.0, 88.859375, 130.9609375, 128.04296875, 133.4296875, 126.35546875, 108.9296875, 0, 0]

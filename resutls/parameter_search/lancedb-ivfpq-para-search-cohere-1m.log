@@ -1,0 +1,8 @@
+[INFO] Starting parameter search for IVF k-probe...
+[INFO] min probe = 1
+[INFO] max probe = 100
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --case-type Performance768D1M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-1m --num-partitions 4000 --nprobes 1 > results-hnsw-ivfpq-para-search-kprobe-Performance768D1M/ivfpq-para-search-Performance768D1M-probe-1.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --case-type Performance768D1M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-1m --num-partitions 4000 --nprobes 100 > results-hnsw-ivfpq-para-search-kprobe-Performance768D1M/ivfpq-para-search-Performance768D1M-probe-100.txt 2>&1
+[RESULT] probe = 1, recall = 0.547
+[RESULT] probe = 200, recall = 0.7412
+Probe 100 does not meet the target recall of 0.9. No further search needed.

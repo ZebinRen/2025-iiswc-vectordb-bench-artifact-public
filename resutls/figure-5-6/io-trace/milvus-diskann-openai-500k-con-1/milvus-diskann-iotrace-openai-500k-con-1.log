@@ -1,0 +1,23 @@
+nr_file_pages 2216077
+1
+nr_file_pages 283826
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 0)/ // Match major=259, minor=0
+           ~~
+Running with root privileges.
+Result directory already exists: results-io-trace/milvus-diskann-openai-500k-con-1
+Result directory already exists: figures-io-trace/milvus-diskann-openai-500k-con-1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace/milvus-diskann-openai-500k-con-1/bio-trace-openai-500k-con-1-k-10-searchlist-10.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-io-trace/milvus-diskann-openai-500k-con-1/vdb-bench-openai-500k-con-1-k-10-searchlist-10.log 2>&1
+Execution finished, start parsing.
+vdb_start_offset_in_trace: 5.0
+vdb_end_offset_in_trace: 35.0
+read bandwidth: [4, 0, 0, 0, 0, 9768, 24264, 22752, 23624, 23920, 22344, 23656, 24720, 24664, 24576, 24368, 24080, 23840, 23920, 23816, 22264, 24344, 23648, 25704, 24264, 26072, 23832, 23336, 23296, 23440, 23376, 24640, 24808, 24368, 24320, 10704, 288, 15976, 15544, 14928, 15408, 13496, 13472, 15080, 14120, 14456, 13784, 16668, 13944, 14512, 13928, 14088, 13608, 3304]
+dict_keys(['ALL_READS', 'ALL_WRITES', 'R', 'WS', 'FF', 'RA', 'WFS', 'RM', 'WM', 'W'])
+TYPE 1 FONTS ENABLED
+{'ts': [109778, 109778, 109779, 109780, 109781, 109783, 109784, 109785, 109786, 109787, 109788, 109789, 109790, 109791, 109792, 109793, 109794, 109795, 109796, 109797, 109798, 109799, 109800, 109801, 109802, 109803, 109804, 109805, 109806, 109807, 109808, 109809, 109810, 109811, 109812, 109813, 109814, 109815, 109816, 109817, 109818, 109819, 109820, 109821, 109822, 109823, 109824, 109825, 109826, 109827, 109828, 109829, 109830, 109831], 'size': [4, 0, 0, 0, 0, 9768, 24264, 22752, 23624, 23920, 22344, 23656, 24720, 24664, 24576, 24368, 24080, 23840, 23920, 23816, 22264, 24344, 23648, 25704, 24264, 26072, 23832, 23336, 23296, 23440, 23376, 24640, 24808, 24368, 24320, 10704, 288, 15976, 15544, 14928, 15408, 13496, 13472, 15080, 14120, 14456, 13784, 16668, 13944, 14512, 13928, 14088, 13608, 3304], 'qps': 0}
+[0.00390625, 0.0, 0.0, 0.0, 0.0, 9.5390625, 23.6953125, 22.21875, 23.0703125, 23.359375, 21.8203125, 23.1015625, 24.140625, 24.0859375, 24.0, 23.796875, 23.515625, 23.28125, 23.359375, 23.2578125, 21.7421875, 23.7734375, 23.09375, 25.1015625, 23.6953125, 25.4609375, 23.2734375, 22.7890625, 22.75, 22.890625, 22.828125, 24.0625, 24.2265625, 23.796875, 23.75, 10.453125, 0.28125, 15.6015625, 15.1796875, 14.578125, 15.046875, 13.1796875, 13.15625, 14.7265625, 13.7890625, 14.1171875, 13.4609375, 16.27734375, 13.6171875, 14.171875, 13.6015625, 13.7578125, 13.2890625, 3.2265625]

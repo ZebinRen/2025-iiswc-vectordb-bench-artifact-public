@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 16693873
+1
+nr_file_pages 7929905
+nr_file_pages 7987509
+1
+nr_file_pages 7929434
+nr_file_pages 7980063
+1
+nr_file_pages 7929350
+nr_file_pages 7979860
+1
+nr_file_pages 7929398
+nr_file_pages 7979858
+1
+nr_file_pages 7929384
+nr_file_pages 7976529
+1
+nr_file_pages 7929332
+nr_file_pages 7979981
+1
+nr_file_pages 7929387
+Result directory already exists: results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output
+Result directory already exists: results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace
+Result directory already exists: results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace
+Result directory already exists: results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 1 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 1 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 1 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 1 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 1 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 2 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1nr_file_pages 7980835
+1
+nr_file_pages 7929401
+nr_file_pages 7979934
+1
+nr_file_pages 7929368
+nr_file_pages 7980038
+1
+nr_file_pages 7929310
+nr_file_pages 7979984
+1
+nr_file_pages 7929227
+nr_file_pages 7979944
+1
+nr_file_pages 7929303
+nr_file_pages 7980107
+1
+nr_file_pages 7929398
+nr_file_pages 7980813
+1
+nr_file_pages 7929379
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 2 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 2 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 2 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 2 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 4 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 4 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 4 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1nr_file_pages 7979905
+1
+nr_file_pages 7929256
+nr_file_pages 7979950
+1
+nr_file_pages 7929353
+nr_file_pages 7979927
+1
+nr_file_pages 7929269
+nr_file_pages 7979964
+1
+nr_file_pages 7929418
+nr_file_pages 7981009
+1
+nr_file_pages 7929318
+nr_file_pages 7980040
+1
+nr_file_pages 7929376
+nr_file_pages 7980060
+1
+nr_file_pages 7929334
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 4 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 4 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 8 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 8 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 8 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 8 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 8 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1nr_file_pages 7980960
+1
+nr_file_pages 7930219
+nr_file_pages 7981267
+1
+nr_file_pages 7929332
+nr_file_pages 7981019
+1
+nr_file_pages 7929718
+nr_file_pages 7980137
+1
+nr_file_pages 7929275
+nr_file_pages 7980103
+1
+nr_file_pages 7929255
+nr_file_pages 7980081
+1
+nr_file_pages 7929378
+nr_file_pages 7976623
+1
+nr_file_pages 7929401
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 16 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 16 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 16 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 16 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 16 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 32 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 32 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1nr_file_pages 7980959
+1
+nr_file_pages 7929404
+nr_file_pages 7980131
+1
+nr_file_pages 7929302
+nr_file_pages 7980260
+1
+nr_file_pages 7929400
+nr_file_pages 7980278
+1
+nr_file_pages 7929492
+nr_file_pages 7980311
+1
+nr_file_pages 7929336
+nr_file_pages 7981112
+1
+nr_file_pages 7929328
+nr_file_pages 7980262
+1
+nr_file_pages 7929405
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 32 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 32 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 32 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 64 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 64 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 64 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 64 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1nr_file_pages 7980698
+1
+nr_file_pages 7929555
+nr_file_pages 7982878
+1
+nr_file_pages 7930333
+nr_file_pages 7982585
+1
+nr_file_pages 7930087
+nr_file_pages 7983886
+1
+nr_file_pages 7930150
+nr_file_pages 7981803
+1
+nr_file_pages 7930132
+nr_file_pages 7981651
+1
+nr_file_pages 7930234
+nr_file_pages 7982740
+1
+nr_file_pages 7930383
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 64 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 128 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 128 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 128 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 128 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 128 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 256 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1nr_file_pages 7981367
+1
+nr_file_pages 7929465
+nr_file_pages 7980365
+1
+nr_file_pages 7929499
+nr_file_pages 8000065
+1
+nr_file_pages 7930585
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 256 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 256 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 256 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance1536D5M --k 10 --num-concurrency 256 --url http://localhost:6339 --grpc-port 6340 --m 16 --ef-construct 200 --hnsw-ef 10 > results-performance/qdrant-hnsw-mem-openai-5m/qdrant-hnsw-mem-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Results:
+QPS:  {1: [75.1968, 74.9795, 74.638, 74.1053, 74.6059], 2: [163.0186, 162.5789, 162.2648, 161.1203, 162.1602], 4: [338.7801, 332.38, 331.5857, 341.5719, 339.4276], 8: [648.2705, 706.8155, 648.7311, 711.9826, 711.4465], 16: [1039.5848, 1037.6069, 1041.1001, 1039.1231, 941.8511], 32: [1207.6771, 1100.7227, 1203.4719, 1201.1812, 1211.8247], 64: [1244.9984, 1246.5275, 1249.0934, 1250.0926, 1239.1839], 128: [1125.5233, 1242.6582, 1138.0459, 1134.2337, 1233.9163], 256: [1092.5535, 1199.3413, 1121.0802, 1111.2987, 1202.0032]}
+Latency:  {1: [15.8, 15.8, 15.4, 15.6, 15.7], 2: [16.0, 15.8, 15.7, 15.7, 15.5], 4: [15.7, 16.0, 15.7, 15.5, 15.8], 8: [16.0, 16.299999999999997, 15.9, 15.299999999999999, 16.1], 16: [16.400000000000002, 15.7, 15.8, 15.9, 16.2], 32: [15.2, 15.100000000000001, 12.5, 9.299999999999999, 14.5], 64: [15.299999999999999, 15.5, 15.299999999999999, 9.299999999999999, 9.4], 128: [9.4, 13.100000000000001, 15.4, 15.6, 12.0], 256: [15.6, 13.5, 15.2, 15.100000000000001, 14.8]}
+Recall:  {1: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 2: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 4: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 8: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 16: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 32: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 64: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 128: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044], 256: [0.9044, 0.9044, 0.9044, 0.9044, 0.9044]}
+Average:
+QPS Average: [74.7051, 162.22856000000002, 336.74906, 685.44924, 1019.8532000000001, 1184.9755200000002, 1245.9791599999999, 1174.8754800000002, 1145.25538]
+QPS Std Dev: [0.3717976169907482, 0.6294645298982336, 4.007704017314665, 30.222092249981667, 39.01696377802869, 42.28360915647574, 3.848558296609251, 52.00793299520374, 46.17485336671468]
+Latency Average: [15.66, 15.74, 15.74, 15.919999999999998, 16.0, 13.319999999999999, 12.959999999999999, 13.1, 14.84]
+Latency Std Dev: [0.14966629547095778, 0.16248076809271933, 0.1624807680927193, 0.3370459909270543, 0.26076809620810654, 2.2328457179124586, 2.9486267990371378, 2.2995651762887697, 0.7172168430816442]
+Recall Average: [0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001, 0.9044000000000001]
+Recall Std Dev: [1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16, 1.1102230246251565e-16]
+
+Detailed Results:
+concurrency=1:
+  QPS: 74.71 ± 0.37
+  Latency: 15.66 ± 0.15
+  Recall: 0.90 ± 0.00
+concurrency=2:
+  QPS: 162.23 ± 0.63
+  Latency: 15.74 ± 0.16
+  Recall: 0.90 ± 0.00
+concurrency=4:
+  QPS: 336.75 ± 4.01
+  Latency: 15.74 ± 0.16
+  Recall: 0.90 ± 0.00
+concurrency=8:
+  QPS: 685.45 ± 30.22
+  Latency: 15.92 ± 0.34
+  Recall: 0.90 ± 0.00
+concurrency=16:
+  QPS: 1019.85 ± 39.02
+  Latency: 16.00 ± 0.26
+  Recall: 0.90 ± 0.00
+concurrency=32:
+  QPS: 1184.98 ± 42.28
+  Latency: 13.32 ± 2.23
+  Recall: 0.90 ± 0.00
+concurrency=64:
+  QPS: 1245.98 ± 3.85
+  Latency: 12.96 ± 2.95
+  Recall: 0.90 ± 0.00
+concurrency=128:
+  QPS: 1174.88 ± 52.01
+  Latency: 13.10 ± 2.30
+  Recall: 0.90 ± 0.00
+concurrency=256:
+  QPS: 1145.26 ± 46.17
+  Latency: 14.84 ± 0.72
+  Recall: 0.90 ± 0.00
+TYPE 1 FONTS ENABLED
+Created result directory: figures-performance/qdrant-hnsw-mem-openai-5m

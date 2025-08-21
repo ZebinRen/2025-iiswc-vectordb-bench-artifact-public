@@ -1,0 +1,609 @@
+nr_file_pages 2307579
+1
+nr_file_pages 421930
+nr_file_pages 482669
+1
+nr_file_pages 322016
+nr_file_pages 379817
+1
+nr_file_pages 321979
+nr_file_pages 380415
+1
+nr_file_pages 322087
+nr_file_pages 380485
+1
+nr_file_pages 322080
+nr_file_pages 381555
+1
+nr_file_pages 322062
+Created result directory: results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output
+Created result directory: results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace
+Created result directory: results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace
+Created result directory: results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 10 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-0.log 2>&1nr_file_pages 380587
+1
+nr_file_pages 322034
+nr_file_pages 381368
+1
+nr_file_pages 322119
+nr_file_pages 379594
+1
+nr_file_pages 321998
+nr_file_pages 380488
+1
+nr_file_pages 322166
+nr_file_pages 381637
+1
+nr_file_pages 322145
+nr_file_pages 380610
+1
+nr_file_pages 322178
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 20 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-20-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 20 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-20-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 20 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-20-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 20 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-20-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-20-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 20 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-20-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 30 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-30-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-1.log 2>&1nr_file_pages 381620
+1
+nr_file_pages 322088
+nr_file_pages 380625
+1
+nr_file_pages 322189
+nr_file_pages 381530
+1
+nr_file_pages 322119
+nr_file_pages 380631
+1
+nr_file_pages 322193
+nr_file_pages 382451
+1
+nr_file_pages 322197
+nr_file_pages 380661
+1
+nr_file_pages 322255
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 30 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-30-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 30 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-30-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 30 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-30-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-30-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 30 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-30-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 40 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-40-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 40 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-40-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-2.log 2>&1nr_file_pages 383425
+1
+nr_file_pages 322202
+nr_file_pages 383283
+1
+nr_file_pages 322177
+nr_file_pages 382281
+1
+nr_file_pages 322237
+nr_file_pages 382334
+1
+nr_file_pages 322234
+nr_file_pages 379633
+1
+nr_file_pages 322161
+nr_file_pages 380062
+1
+nr_file_pages 322227
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 40 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-40-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 40 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-40-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-40-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 40 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-40-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 50 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-50-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 50 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-50-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 50 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-50-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-3.log 2>&1nr_file_pages 381629
+1
+nr_file_pages 322255
+nr_file_pages 381477
+1
+nr_file_pages 322229
+nr_file_pages 380838
+1
+nr_file_pages 322201
+nr_file_pages 380651
+1
+nr_file_pages 322210
+nr_file_pages 380844
+1
+nr_file_pages 322161
+nr_file_pages 380654
+1
+nr_file_pages 322211
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 50 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-50-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-50-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 50 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-50-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 60 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-60-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 60 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-60-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 60 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-60-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 60 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-60-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-4.log 2>&1nr_file_pages 381585
+1
+nr_file_pages 322177
+nr_file_pages 381507
+1
+nr_file_pages 322224
+nr_file_pages 380781
+1
+nr_file_pages 322227
+nr_file_pages 380704
+1
+nr_file_pages 322307
+nr_file_pages 380783
+1
+nr_file_pages 322219
+nr_file_pages 380680
+1
+nr_file_pages 322191
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-60-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 60 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-60-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 70 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-70-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 70 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-70-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 70 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-70-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 70 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-70-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-70-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 70 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-70-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-0.log 2>&1nr_file_pages 383446
+1
+nr_file_pages 322223
+nr_file_pages 381636
+1
+nr_file_pages 322225
+nr_file_pages 380745
+1
+nr_file_pages 322303
+nr_file_pages 380756
+1
+nr_file_pages 322325
+nr_file_pages 380784
+1
+nr_file_pages 322222
+nr_file_pages 381766
+1
+nr_file_pages 322271
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 80 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-80-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 80 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-80-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 80 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-80-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 80 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-80-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-80-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 80 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-80-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 90 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-90-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-1.log 2>&1nr_file_pages 380896
+1
+nr_file_pages 322336
+nr_file_pages 381720
+1
+nr_file_pages 322309
+nr_file_pages 380858
+1
+nr_file_pages 322299
+nr_file_pages 380936
+1
+nr_file_pages 322259
+nr_file_pages 380979
+1
+nr_file_pages 322310
+nr_file_pages 381735
+1
+nr_file_pages 322327
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 90 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-90-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 90 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-90-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 90 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-90-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-90-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 90 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-90-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 100 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-100-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 100 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-100-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-2.log 2>&1nr_file_pages 380754
+1
+nr_file_pages 322351
+nr_file_pages 381801
+1
+nr_file_pages 322309
+
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 100 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-100-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 100 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-100-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-cpu-trace/cpu-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-mem-trace/mem-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-page-cache-trace/page-caceh-trace-openai-500k-concurrency-1-k-10-searchlist-100-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance1536D500K  --db-label milvus_diskann_openai_500k --k 10 --num-concurrency 1 --uri http://localhost:19541 --password '' --search-list 100 > results-performance-var-arg/milvus-diskann-openai-500k-var-klist-concurrency-1/milvus-diskann-openai-500k-var-klist-concurrency-1-output/vdb-bench-openai-500k-concurrency-1-k-10-searchlist-100-rep-4.log 2>&1
+Results:
+QPS:  {10: [102.5037, 103.5077, 102.6494, 102.8669, 102.6986], 20: [81.997, 82.3323, 82.5283, 82.4012, 81.8218], 30: [79.6119, 79.0472, 79.0593, 80.0022, 78.6758], 40: [76.5903, 76.8252, 77.0029, 76.0155, 76.3669], 50: [73.6514, 73.1815, 73.9469, 73.9313, 73.2528], 60: [70.7036, 70.9521, 70.0529, 69.9174, 71.191], 70: [68.1688, 67.542, 68.4359, 67.9798, 67.5405], 80: [65.1363, 64.4878, 65.4164, 64.5968, 65.4953], 90: [63.4232, 61.594, 62.7249, 61.8461, 62.9128], 100: [60.4481, 60.4112, 61.17, 60.3248, 61.5245]}
+Latency:  {10: [11.299999999999999, 11.299999999999999, 11.4, 11.2, 11.4], 20: [14.4, 14.200000000000001, 14.6, 14.3, 14.3], 30: [15.5, 15.299999999999999, 15.299999999999999, 15.4, 15.2], 40: [16.0, 15.7, 15.8, 15.9, 15.7], 50: [16.5, 16.6, 16.9, 16.6, 16.400000000000002], 60: [17.3, 17.3, 17.6, 17.1, 17.3], 70: [18.0, 17.9, 18.2, 18.1, 17.8], 80: [18.700000000000003, 18.9, 19.0, 18.599999999999998, 19.099999999999998], 90: [19.5, 19.400000000000002, 19.400000000000002, 19.3, 19.400000000000002], 100: [20.6, 20.6, 20.2, 20.8, 20.5]}
+Recall:  {10: [0.9563, 0.9563, 0.9563, 0.9563, 0.9563], 20: [0.9836, 0.9836, 0.9836, 0.9836, 0.9836], 30: [0.9884, 0.9884, 0.9884, 0.9884, 0.9884], 40: [0.9899, 0.9899, 0.9899, 0.9899, 0.9899], 50: [0.9923, 0.9923, 0.9923, 0.9923, 0.9923], 60: [0.9932, 0.9932, 0.9932, 0.9932, 0.9932], 70: [0.994, 0.994, 0.994, 0.994, 0.994], 80: [0.9949, 0.9949, 0.9949, 0.9949, 0.9949], 90: [0.9958, 0.9958, 0.9958, 0.9958, 0.9958], 100: [0.9964, 0.9964, 0.9964, 0.9964, 0.9964]}
+Average:
+QPS Average: [102.84526000000001, 82.21612, 79.27928, 76.56016, 73.59277999999999, 70.5634, 67.9334, 65.02651999999999, 62.50019999999999, 60.77572]
+QPS Std Dev: [0.350949732013006, 0.2640873294953796, 0.46897544242742895, 0.34674984412397103, 0.3250140636957112, 0.49850812230093267, 0.3514645757398628, 0.4144131436139555, 0.6814254324575796, 0.4815945905011818]
+Latency Average: [11.32, 14.36, 15.339999999999998, 15.819999999999999, 16.6, 17.32, 17.999999999999996, 18.86, 19.400000000000002, 20.54]
+Latency Std Dev: [0.07483314773547932, 0.1356465996625049, 0.1019803902718561, 0.11661903789690634, 0.16733200530681408, 0.16000000000000006, 0.1414213562373095, 0.18547236990991356, 0.06324555320336736, 0.19595917942265484]
+Recall Average: [0.9563, 0.9836, 0.9884000000000001, 0.9899000000000001, 0.9923, 0.9932000000000001, 0.994, 0.9949, 0.9958, 0.9963999999999998]
+Recall Std Dev: [0.0, 0.0, 1.1102230246251565e-16, 1.1102230246251565e-16, 0.0, 1.1102230246251565e-16, 0.0, 0.0, 0.0, 1.1102230246251565e-16]
+
+Detailed Results:
+searchlist=10:
+  QPS: 102.85 ± 0.35
+  Latency: 11.32 ± 0.07
+  Recall: 0.96 ± 0.00
+searchlist=20:
+  QPS: 82.22 ± 0.26
+  Latency: 14.36 ± 0.14
+  Recall: 0.98 ± 0.00
+searchlist=30:
+  QPS: 79.28 ± 0.47
+  Latency: 15.34 ± 0.10
+  Recall: 0.99 ± 0.00
+searchlist=40:
+  QPS: 76.56 ± 0.35
+  Latency: 15.82 ± 0.12
+  Recall: 0.99 ± 0.00
+searchlist=50:
+  QPS: 73.59 ± 0.33
+  Latency: 16.60 ± 0.17
+  Recall: 0.99 ± 0.00
+searchlist=60:
+  QPS: 70.56 ± 0.50
+  Latency: 17.32 ± 0.16
+  Recall: 0.99 ± 0.00
+searchlist=70:
+  QPS: 67.93 ± 0.35
+  Latency: 18.00 ± 0.14
+  Recall: 0.99 ± 0.00
+searchlist=80:
+  QPS: 65.03 ± 0.41
+  Latency: 18.86 ± 0.19
+  Recall: 0.99 ± 0.00
+searchlist=90:
+  QPS: 62.50 ± 0.68
+  Latency: 19.40 ± 0.06
+  Recall: 1.00 ± 0.00
+searchlist=100:
+  QPS: 60.78 ± 0.48
+  Latency: 20.54 ± 0.20
+  Recall: 1.00 ± 0.00
+TYPE 1 FONTS ENABLED
+Created result directory: figures-performance-var-arg/milvus-diskann-var-klist-openai-500k-concurrency-1

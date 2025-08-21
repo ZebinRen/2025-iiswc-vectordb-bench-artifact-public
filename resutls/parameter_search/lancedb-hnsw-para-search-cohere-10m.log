@@ -1,0 +1,16 @@
+nohup: ignoring input
+[INFO] Starting parameter search for HNSW efsearch...
+[INFO] min efsearch = 10
+[INFO] max efsearch = 100
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-cohere-10m --m 16 --ef-construction 200 --ef 10 > results-lancedb-hnsw-para-search-efsearch-Performance768D10M/hnsw-para-search-Performance768D10M-efsearch-10.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-cohere-10m --m 16 --ef-construction 200 --ef 100 > results-lancedb-hnsw-para-search-efsearch-Performance768D10M/hnsw-para-search-Performance768D10M-efsearch-100.txt 2>&1
+[RESULT] efsearch = 10, recall = 0.6511
+[RESULT] efsearch = 100, recall = 0.9226
+[INFO] Testing efsearch = 55
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-cohere-10m --m 16 --ef-construction 200 --ef 55 > results-lancedb-hnsw-para-search-efsearch-Performance768D10M/hnsw-para-search-Performance768D10M-efsearch-55.txt 2>&1
+[RESULT] efsearch = 55, recall = 0.8993
+[INFO] evaluate efsearch_min = cur_efsearch + 1 = 56
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-cohere-10m --m 16 --ef-construction 200 --ef 56 > results-lancedb-hnsw-para-search-efsearch-Performance768D10M/hnsw-para-search-Performance768D10M-efsearch-56.txt 2>&1
+[RESULT] efsearch_min = 56, recall = 0.9002
+[INFO] Final efsearch value: efsearch = 56, recall = 0.9002
+[INFO] Final efsearch value: efsearch = 100, recall = 0.9226

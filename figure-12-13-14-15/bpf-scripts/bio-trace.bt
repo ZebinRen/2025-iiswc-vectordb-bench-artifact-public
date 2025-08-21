@@ -1,0 +1,28 @@
+// check major and minor: ls -l /dev/nvme0n1
+
+BEGIN
+{
+    /* print human-readable start time */
+    printf(">>> Trace started at: %llu %s\n", nsecs, strftime("%Y-%m-%d %H:%M:%S", nsecs));
+    /* optionally save timestamp in nanoseconds for elapsed-time calc */
+    @t0 = nsecs;
+}
+
+
+tracepoint:block:block_rq_issue
+/args->dev == ((259 << 20) | 1)/ // Match major=259, minor=1
+{
+    printf("%llu, %s, %d, %llu, %d\n", nsecs, args->rwbs, args->bytes, args->sector, args->nr_sector);
+}
+
+END
+{
+    /* print human-readable end time */
+    printf("<<< Trace ended   at %s\n", strftime("%Y-%m-%d %H:%M:%S", nsecs));
+
+    /* if you recorded @t0 you can also show elapsed time */
+    $diff = nsecs - @t0;
+    printf("    Elapsed: %llu.%03llu seconds\n",
+           $diff / 1000000000,
+           ($diff / 1000000) % 1000);
+}

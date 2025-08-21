@@ -1,0 +1,473 @@
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2338128
+1
+nr_file_pages 220179
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 311591
+1
+nr_file_pages 119542
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 210846
+1
+nr_file_pages 117678
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208723
+1
+nr_file_pages 118094
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208092
+1
+nr_file_pages 117708
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2372676
+1
+nr_file_pages 220348
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 312606
+1
+nr_file_pages 121026
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208805
+1
+nr_file_pages 117575
+Result directory already exists: results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output
+Result directory already exists: results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-1-rep-4.log 2>&1
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-2.log 2>&1./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 211050
+1
+nr_file_pages 117808
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208168
+1
+nr_file_pages 117785
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2032226
+1
+nr_file_pages 218692
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 306550
+1
+nr_file_pages 117918
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 203218
+1
+nr_file_pages 118011
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 209986
+1
+nr_file_pages 118028
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208306
+1
+nr_file_pages 117934
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2132211
+1
+nr_file_pages 218935
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-2-rep-4.log 2>&1
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-3-rep-4.log 2>&1
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-0.log 2>&1./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 311520
+1
+nr_file_pages 117927
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 203127
+1
+nr_file_pages 117705
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208803
+1
+nr_file_pages 117829
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208321
+1
+nr_file_pages 117886
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2374446
+1
+nr_file_pages 218121
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 306051
+1
+nr_file_pages 118055
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208807
+1
+nr_file_pages 117762
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208801
+1
+nr_file_pages 117822
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-4-rep-4.log 2>&1
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-3.log 2>&1
+Clean page cache, number of pages before clean:nr_file_pages 208312
+1
+nr_file_pages 117806
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+Stop successfully.
+Wait for Milvus Starting...
+Start successfully.
+To change the default Milvus configuration, add your settings to the user.yaml file and then restart the service.
+nr_file_pages 2084425
+1
+nr_file_pages 218522
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 306362
+1
+nr_file_pages 117734
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 208748
+1
+nr_file_pages 117756
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 209741
+1
+nr_file_pages 117850
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+nr_file_pages 202614
+1
+nr_file_pages 117796
+./bpf-scripts/bio-trace.bt:13:12-14: WARNING: comparison of integers of different signs: 'unsigned int32' and 'int64' can lead to undefined behavior
+/args->dev == ((259 << 20) | 2)/ // Match major=259, minor=0
+           ~~
+grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-5-rep-4.log 2>&1
+bash /mnt/vectordb/nvme0n1/milvus/milvus-diskann-cohere-1m/standalone_embed.sh restart
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-0.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-1.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-2.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-3.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+sudo /home/zebin/tools/bpftrace/build/src/bpftrace ./bpf-scripts/bio-trace.bt  >  results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/io-trace-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-4.log
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 100 > results-io-trace-var-arg/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-io-trace/milvus-diskann-cohere-1m-var-bwidth-concurrency-1-output/vdb-bench-cohere-1m-concurrency-1-k-10-searchlist-100-bwidth-6-rep-4.log 2>&1
+Parsing: bwidth 1, rep 0
+Parsing: bwidth 1, rep 1
+Parsing: bwidth 1, rep 2
+Parsing: bwidth 1, rep 3
+Parsing: bwidth 1, rep 4
+Parsing: bwidth 2, rep 0
+Parsing: bwidth 2, rep 1
+Parsing: bwidth 2, rep 2
+Parsing: bwidth 2, rep 3
+Parsing: bwidth 2, rep 4
+Parsing: bwidth 3, rep 0
+Parsing: bwidth 3, rep 1
+Parsing: bwidth 3, rep 2
+Parsing: bwidth 3, rep 3
+Parsing: bwidth 3, rep 4
+Parsing: bwidth 4, rep 0
+Parsing: bwidth 4, rep 1
+Parsing: bwidth 4, rep 2
+Parsing: bwidth 4, rep 3
+Parsing: bwidth 4, rep 4
+Parsing: bwidth 5, rep 0
+Parsing: bwidth 5, rep 1
+Parsing: bwidth 5, rep 2
+Parsing: bwidth 5, rep 3
+Parsing: bwidth 5, rep 4
+Parsing: bwidth 6, rep 0
+Parsing: bwidth 6, rep 1
+Parsing: bwidth 6, rep 2
+Parsing: bwidth 6, rep 3
+Parsing: bwidth 6, rep 4
+Results:
+QPS:  {1: [80.2622, 79.7099, 80.2283, 80.8338, 81.1596], 2: [80.4445, 80.0814, 79.3716, 80.5283, 80.99], 3: [78.8158, 79.5792, 80.7336, 80.4108, 79.7438], 4: [78.4187, 77.9428, 79.7206, 81.2796, 80.938], 5: [79.9217, 80.4721, 81.155, 80.5571, 81.3436], 6: [79.5895, 79.5671, 80.5332, 81.3711, 81.3431]}
+Latency:  {1: [0.0, 0.0, 0.0, 0.0, 0.0], 2: [0.0, 0.0, 0.0, 0.0, 0.0], 3: [0.0, 0.0, 0.0, 0.0, 0.0], 4: [0.0, 0.0, 0.0, 0.0, 0.0], 5: [0.0, 0.0, 0.0, 0.0, 0.0], 6: [0.0, 0.0, 0.0, 0.0, 0.0]}
+Recall:  {1: [0.0, 0.0, 0.0, 0.0, 0.0], 2: [0.0, 0.0, 0.0, 0.0, 0.0], 3: [0.0, 0.0, 0.0, 0.0, 0.0], 4: [0.0, 0.0, 0.0, 0.0, 0.0], 5: [0.0, 0.0, 0.0, 0.0, 0.0], 6: [0.0, 0.0, 0.0, 0.0, 0.0]}
+Average:
+QPS Average: [80.43876, 80.28316, 79.85664, 79.65994, 80.6899, 80.4808]
+QPS Std Dev: [0.5064327501258153, 0.5398880869217236, 0.6707020011897976, 1.32285010730619, 0.5096755085345954, 0.7960156430623726]
+Latency Average: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Latency Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Recall Average: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+searchlist=1:
+  QPS: 80.44 ± 0.51
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 37.09 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+searchlist=2:
+  QPS: 80.28 ± 0.54
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 37.09 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+searchlist=3:
+  QPS: 79.86 ± 0.67
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 36.37 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+searchlist=4:
+  QPS: 79.66 ± 1.32
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 36.90 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+searchlist=5:
+  QPS: 80.69 ± 0.51
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 37.45 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+searchlist=6:
+  QPS: 80.48 ± 0.80
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+  Total Bandwidth: 37.08 ± 0.00 MiB/s
+  Average Bandwidth: 0.46 ± 0.00 MiB/s
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-iotrace-var-arg/milvus-diskann-var-bwidth-cohere-1m-concurrency-1

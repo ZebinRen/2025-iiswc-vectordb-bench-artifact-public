@@ -1,0 +1,31 @@
+nohup: ignoring input
+[INFO] Starting parameter search for IVF k-probe...
+[INFO] min probe = 1
+[INFO] max probe = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 1 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-1.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 100 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-100.txt 2>&1
+[RESULT] probe = 1, recall = 0.4754
+[RESULT] probe = 100, recall = 0.9824
+[INFO] Testing probe = 50
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 50 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-50.txt 2>&1
+[RESULT] probe = 50, recall = 0.9622
+[INFO] Testing probe = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 25 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-25.txt 2>&1
+[RESULT] probe = 25, recall = 0.9272
+[INFO] Testing probe = 13
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 13 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-13.txt 2>&1
+[RESULT] probe = 13, recall = 0.8783
+[INFO] evaluate probe_min = cur_probe + 1 = 14
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 14 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-14.txt 2>&1
+[RESULT] probe_min = 14, recall = 0.8847
+[INFO] Testing probe = 19
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 19 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-19.txt 2>&1
+[RESULT] probe = 19, recall = 0.9094
+[INFO] Testing probe = 16
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 16 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-16.txt 2>&1
+[RESULT] probe = 16, recall = 0.8966
+[INFO] evaluate probe_min = cur_probe + 1 = 17
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19532 --password "" --lists 12648 --probes 17 > results-ivf-para-search-kprobe-Performance768D10M/ivf-para-search-Performance768D10M-probe-17.txt 2>&1
+[RESULT] probe_min = 17, recall = 0.9012
+[INFO] Final probe value: probe = 17, recall = 0.9012
+[INFO] Final probe value: probe = 19, recall = 0.9094

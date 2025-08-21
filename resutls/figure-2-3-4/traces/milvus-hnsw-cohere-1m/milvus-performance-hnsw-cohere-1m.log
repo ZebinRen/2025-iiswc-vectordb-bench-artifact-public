@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 1013187
+1
+nr_file_pages 116583
+nr_file_pages 179077
+1
+nr_file_pages 117523
+nr_file_pages 177382
+1
+nr_file_pages 117390
+nr_file_pages 177431
+1
+nr_file_pages 117636
+nr_file_pages 177278
+1
+nr_file_pages 117629
+nr_file_pages 177436
+1
+nr_file_pages 117541
+nr_file_pages 177347
+1
+nr_file_pages 117784
+Result directory already exists: results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output
+Result directory already exists: results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace
+Result directory already exists: results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace
+Result directory already exists: results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+nr_file_pages 177320
+1
+nr_file_pages 117834
+nr_file_pages 176688
+1
+nr_file_pages 117833
+nr_file_pages 178355
+1
+nr_file_pages 117739
+nr_file_pages 177464
+1
+nr_file_pages 117811
+nr_file_pages 177520
+1
+nr_file_pages 117869
+nr_file_pages 177474
+1
+nr_file_pages 117984
+nr_file_pages 176946
+1
+nr_file_pages 118507
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+nr_file_pages 177623
+1
+nr_file_pages 117972
+nr_file_pages 177624
+1
+nr_file_pages 118008
+nr_file_pages 178909
+1
+nr_file_pages 118167
+nr_file_pages 177814
+1
+nr_file_pages 118046
+nr_file_pages 177779
+1
+nr_file_pages 118128
+nr_file_pages 177888
+1
+nr_file_pages 118114
+nr_file_pages 177637
+1
+nr_file_pages 118075
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+nr_file_pages 177124
+1
+nr_file_pages 118087
+nr_file_pages 177973
+1
+nr_file_pages 118083
+nr_file_pages 178738
+1
+nr_file_pages 118183
+nr_file_pages 178004
+1
+nr_file_pages 118146
+nr_file_pages 177927
+1
+nr_file_pages 118153
+nr_file_pages 177920
+1
+nr_file_pages 118184
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+nr_file_pages 178040
+1
+nr_file_pages 118148
+nr_file_pages 177992
+1
+nr_file_pages 118230
+nr_file_pages 178033
+1
+nr_file_pages 118264
+nr_file_pages 178889
+1
+nr_file_pages 118326
+nr_file_pages 178156
+1
+nr_file_pages 118277
+nr_file_pages 178036
+1
+nr_file_pages 118269
+nr_file_pages 177968
+1
+nr_file_pages 118196
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+nr_file_pages 178105
+1
+nr_file_pages 118368
+nr_file_pages 178212
+1
+nr_file_pages 118321
+nr_file_pages 178337
+1
+nr_file_pages 118206
+nr_file_pages 178188
+1
+nr_file_pages 118189
+nr_file_pages 178202
+1
+nr_file_pages 118315
+nr_file_pages 178129
+1
+nr_file_pages 118250
+nr_file_pages 178200
+1
+nr_file_pages 118310
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+nr_file_pages 178318
+1
+nr_file_pages 118302
+nr_file_pages 179077
+1
+nr_file_pages 118336
+nr_file_pages 178221
+1
+nr_file_pages 118376
+nr_file_pages 178237
+1
+nr_file_pages 118382
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_hnsw_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19535 --password '' --m 16 --ef-construction 200 --ef-search 27 > results-performance/milvus-hnsw-cohere-1m/milvus-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-efsearch-27-rep-4.log 2>&1
+Results:
+QPS:  {1: [198.761, 198.0923, 195.1655, 195.7801, 194.6737], 2: [464.7626, 462.843, 469.8483, 469.1031, 463.765], 4: [2443.9024, 2444.7079, 2456.0905, 2452.9688, 2455.25], 8: [4077.3537, 3690.4701, 4079.3581, 4076.018, 4073.9775], 16: [5086.7689, 4767.551, 5232.0791, 4763.5291, 5254.1577], 32: [5610.3163, 5616.5949, 5594.9107, 5601.528, 5582.507], 64: [6277.8692, 6260.4286, 6302.9011, 5732.8667, 6274.8364], 128: [6740.7466, 6802.0782, 6199.1785, 6228.6698, 6829.2154], 256: [7150.2612, 6469.6272, 6528.7785, 6446.1794, 7098.9712]}
+Latency:  {1: [5.8, 6.0, 5.7, 5.7, 5.8], 2: [5.8, 5.8999999999999995, 5.8, 5.8, 5.7], 4: [5.7, 5.7, 5.7, 5.7, 5.8], 8: [5.7, 5.6, 5.6, 5.7, 5.7], 16: [5.6, 5.7, 5.6, 5.6, 5.5], 32: [5.6, 5.7, 5.6, 5.7, 5.7], 64: [5.7, 5.7, 5.7, 5.5, 5.6], 128: [5.6, 5.6, 5.7, 5.6, 5.7], 256: [5.6, 5.6, 5.6, 5.7, 5.7]}
+Recall:  {1: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 2: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 4: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 8: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 16: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 32: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 64: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 128: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012], 256: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012]}
+Average:
+QPS Average: [196.49452000000002, 466.06440000000003, 2450.58392, 3999.43548, 5020.8171600000005, 5601.17138, 6169.7804, 6559.9777, 6738.763500000001]
+QPS Std Dev: [1.6298409792369284, 2.860452357932212, 5.233597214688963, 154.4926375911862, 216.2267053482487, 11.90963394624721, 218.88433018416848, 284.1548780970689, 316.6112594397363]
+Latency Average: [5.8, 5.8, 5.720000000000001, 5.659999999999999, 5.6, 5.659999999999999, 5.640000000000001, 5.64, 5.639999999999999]
+Latency Std Dev: [0.10954451150103316, 0.06324555320336736, 0.039999999999999855, 0.04898979485566382, 0.06324555320336764, 0.04898979485566382, 0.08000000000000011, 0.04898979485566383, 0.04898979485566383]
+Recall Average: [0.9012, 0.9012, 0.9012, 0.9012, 0.9012, 0.9012, 0.9012, 0.9012, 0.9012]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 196.49 ± 1.63
+  Latency: 5.80 ± 0.11
+  Recall: 0.90 ± 0.00
+concurrency=2:
+  QPS: 466.06 ± 2.86
+  Latency: 5.80 ± 0.06
+  Recall: 0.90 ± 0.00
+concurrency=4:
+  QPS: 2450.58 ± 5.23
+  Latency: 5.72 ± 0.04
+  Recall: 0.90 ± 0.00
+concurrency=8:
+  QPS: 3999.44 ± 154.49
+  Latency: 5.66 ± 0.05
+  Recall: 0.90 ± 0.00
+concurrency=16:
+  QPS: 5020.82 ± 216.23
+  Latency: 5.60 ± 0.06
+  Recall: 0.90 ± 0.00
+concurrency=32:
+  QPS: 5601.17 ± 11.91
+  Latency: 5.66 ± 0.05
+  Recall: 0.90 ± 0.00
+concurrency=64:
+  QPS: 6169.78 ± 218.88
+  Latency: 5.64 ± 0.08
+  Recall: 0.90 ± 0.00
+concurrency=128:
+  QPS: 6559.98 ± 284.15
+  Latency: 5.64 ± 0.05
+  Recall: 0.90 ± 0.00
+concurrency=256:
+  QPS: 6738.76 ± 316.61
+  Latency: 5.64 ± 0.05
+  Recall: 0.90 ± 0.00
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-performance/milvus-hnsw-cohere-1m

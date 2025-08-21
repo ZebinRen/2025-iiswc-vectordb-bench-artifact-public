@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 8821573
+1
+nr_file_pages 879066
+nr_file_pages 920336
+1
+nr_file_pages 878727
+nr_file_pages 920097
+1
+nr_file_pages 879151
+nr_file_pages 920426
+1
+nr_file_pages 878837
+nr_file_pages 920029
+1
+nr_file_pages 878656
+nr_file_pages 920947
+1
+nr_file_pages 878653
+nr_file_pages 920127
+1
+nr_file_pages 878766
+Result directory already exists: results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output
+Result directory already exists: results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace
+Result directory already exists: results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace
+Result directory already exists: results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 1 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 1 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 1 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 1 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 1 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 2 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 2 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1nr_file_pages 920001
+1
+nr_file_pages 879224
+nr_file_pages 919205
+1
+nr_file_pages 879106
+nr_file_pages 920101
+1
+nr_file_pages 879008
+nr_file_pages 919298
+1
+nr_file_pages 878968
+nr_file_pages 919999
+1
+nr_file_pages 879106
+nr_file_pages 919264
+1
+nr_file_pages 879092
+nr_file_pages 919225
+1
+nr_file_pages 878778
+nr_file_pages 919204
+1
+nr_file_pages 879025
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 2 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 2 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 2 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 4 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 4 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 4 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 4 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1nr_file_pages 919254
+1
+nr_file_pages 878738
+nr_file_pages 920240
+1
+nr_file_pages 879146
+nr_file_pages 919228
+1
+nr_file_pages 879004
+nr_file_pages 919418
+1
+nr_file_pages 879246
+nr_file_pages 919259
+1
+nr_file_pages 878967
+nr_file_pages 919418
+1
+nr_file_pages 879073
+nr_file_pages 920172
+1
+nr_file_pages 878901
+
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 4 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 8 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 8 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 8 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 8 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 8 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 16 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1nr_file_pages 919311
+1
+nr_file_pages 879068
+nr_file_pages 919353
+1
+nr_file_pages 878834
+nr_file_pages 919413
+1
+nr_file_pages 879208
+nr_file_pages 921461
+1
+nr_file_pages 878942
+nr_file_pages 919499
+1
+nr_file_pages 879115
+nr_file_pages 919573
+1
+nr_file_pages 879408
+nr_file_pages 919493
+1
+nr_file_pages 878995
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 16 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 16 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 16 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 16 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 32 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 32 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 32 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 32 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1nr_file_pages 919509
+1
+nr_file_pages 879221
+nr_file_pages 920403
+1
+nr_file_pages 879063
+nr_file_pages 919463
+1
+nr_file_pages 879395
+nr_file_pages 919571
+1
+nr_file_pages 879226
+nr_file_pages 919550
+1
+nr_file_pages 879175
+nr_file_pages 919604
+1
+nr_file_pages 879070
+nr_file_pages 920549
+1
+nr_file_pages 879276
+nr_file_pages 919608
+1
+nr_file_pages 879094
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 32 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 64 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 64 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 64 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 64 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 64 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 128 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1nr_file_pages 919538
+1
+nr_file_pages 879193
+nr_file_pages 919634
+1
+nr_file_pages 879169
+nr_file_pages 920498
+1
+nr_file_pages 879364
+nr_file_pages 919672
+1
+nr_file_pages 879150
+nr_file_pages 919644
+1
+nr_file_pages 879594
+nr_file_pages 919782
+1
+nr_file_pages 879071
+nr_file_pages 920482
+1
+nr_file_pages 879386
+
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 128 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 128 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 128 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 128 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 256 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 256 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 256 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1nr_file_pages 919748
+1
+nr_file_pages 879608
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 256 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance768D1M --k 10 --num-concurrency 256 --url http://localhost:8081 --m 16 --ef-construction 200 --ef 27 > results-performance/weaviate-hnsw-cohere-1m/weaviate-hnsw-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-m-16-efconstruct-200-ef-27-rep-4.log 2>&1
+Results:
+QPS:  {1: [46.191, 47.6633, 47.6599, 47.5791, 47.487], 2: [96.2448, 95.4997, 95.4103, 95.6986, 95.3539], 4: [196.0953, 195.6182, 196.0165, 194.953, 194.2076], 8: [464.441, 466.9376, 459.3708, 462.6563, 464.6706], 16: [1653.7973, 1694.1604, 1693.9299, 1681.3415, 1692.1128], 32: [1812.3477, 1816.737, 1817.2682, 1815.9995, 1830.7558], 64: [1801.3177, 1785.2673, 1778.2795, 1786.4697, 1783.1254], 128: [1663.4221, 1645.0701, 1675.6033, 1675.2385, 1676.5524], 256: [1579.9211, 1583.5571, 1600.712, 1609.746, 1604.8042]}
+Latency:  {1: [23.400000000000002, 21.5, 21.7, 21.6, 21.6], 2: [21.5, 21.5, 21.6, 21.6, 21.4], 4: [21.5, 21.5, 21.6, 21.5, 21.5], 8: [21.5, 21.5, 21.5, 21.5, 21.5], 16: [21.4, 21.4, 21.5, 21.4, 21.4], 32: [21.4, 21.4, 21.4, 21.3, 21.5], 64: [21.4, 21.4, 21.5, 21.4, 21.9], 128: [21.4, 21.9, 21.6, 22.0, 22.2], 256: [21.4, 22.4, 22.4, 22.1, 22.3]}
+Recall:  {1: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 2: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 4: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 8: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 16: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 32: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 64: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 128: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512], 256: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512]}
+Average:
+QPS Average: [47.31606, 95.64146000000001, 195.37812, 463.6152599999999, 1683.0683800000002, 1818.6216399999998, 1786.8919199999996, 1667.1772799999999, 1595.74808]
+QPS Std Dev: [0.5662105777888635, 0.32357556520849823, 0.7113871896513162, 2.5206577360681077, 15.379111134444711, 6.3064958252899475, 7.736681971594809, 12.055726774674378, 11.84659330633075]
+Latency Average: [21.96, 21.52, 21.52, 21.5, 21.419999999999998, 21.4, 21.52, 21.82, 22.119999999999997]
+Latency Std Dev: [0.7227724399837067, 0.07483314773547989, 0.04000000000000057, 0.0, 0.04000000000000057, 0.06324555320336736, 0.19390719429665312, 0.285657137141714, 0.37629775444453584]
+Recall Average: [0.7512, 0.7512, 0.7512, 0.7512, 0.7512, 0.7512, 0.7512, 0.7512, 0.7512]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 47.32 ± 0.57
+  Latency: 21.96 ± 0.72
+  Recall: 0.75 ± 0.00
+concurrency=2:
+  QPS: 95.64 ± 0.32
+  Latency: 21.52 ± 0.07
+  Recall: 0.75 ± 0.00
+concurrency=4:
+  QPS: 195.38 ± 0.71
+  Latency: 21.52 ± 0.04
+  Recall: 0.75 ± 0.00
+concurrency=8:
+  QPS: 463.62 ± 2.52
+  Latency: 21.50 ± 0.00
+  Recall: 0.75 ± 0.00
+concurrency=16:
+  QPS: 1683.07 ± 15.38
+  Latency: 21.42 ± 0.04
+  Recall: 0.75 ± 0.00
+concurrency=32:
+  QPS: 1818.62 ± 6.31
+  Latency: 21.40 ± 0.06
+  Recall: 0.75 ± 0.00
+concurrency=64:
+  QPS: 1786.89 ± 7.74
+  Latency: 21.52 ± 0.19
+  Recall: 0.75 ± 0.00
+concurrency=128:
+  QPS: 1667.18 ± 12.06
+  Latency: 21.82 ± 0.29
+  Recall: 0.75 ± 0.00
+concurrency=256:
+  QPS: 1595.75 ± 11.85
+  Latency: 22.12 ± 0.38
+  Recall: 0.75 ± 0.00
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-performance/weaviate-hnsw-cohere-1m

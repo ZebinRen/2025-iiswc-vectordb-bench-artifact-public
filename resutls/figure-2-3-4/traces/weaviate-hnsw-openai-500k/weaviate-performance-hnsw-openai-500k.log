@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 1762442
+1
+nr_file_pages 847341
+nr_file_pages 888646
+1
+nr_file_pages 847339
+nr_file_pages 889409
+1
+nr_file_pages 847455
+nr_file_pages 888577
+1
+nr_file_pages 847225
+nr_file_pages 889314
+1
+nr_file_pages 847395
+nr_file_pages 888486
+1
+nr_file_pages 847141
+nr_file_pages 888494
+1
+nr_file_pages 847112
+Result directory already exists: results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output
+Result directory already exists: results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace
+Result directory already exists: results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace
+Result directory already exists: results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 1 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 1 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 1 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 1 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 1 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-1-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 2 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1nr_file_pages 888482
+1
+nr_file_pages 847231
+nr_file_pages 888526
+1
+nr_file_pages 847186
+nr_file_pages 889344
+1
+nr_file_pages 847725
+nr_file_pages 888503
+1
+nr_file_pages 847223
+nr_file_pages 888599
+1
+nr_file_pages 847539
+nr_file_pages 888489
+1
+nr_file_pages 847114
+nr_file_pages 889510
+1
+nr_file_pages 847214
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 2 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 2 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 2 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 2 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-2-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 4 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 4 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 4 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 4 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1nr_file_pages 888556
+1
+nr_file_pages 847155
+nr_file_pages 888594
+1
+nr_file_pages 847316
+nr_file_pages 888512
+1
+nr_file_pages 847140
+nr_file_pages 888536
+1
+nr_file_pages 847191
+nr_file_pages 890751
+1
+nr_file_pages 847193
+nr_file_pages 888588
+1
+nr_file_pages 847206
+nr_file_pages 888595
+1
+nr_file_pages 847279
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 4 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-4-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 8 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 8 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 8 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 8 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 8 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-8-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 16 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstatnr_file_pages 888636
+1
+nr_file_pages 847412
+nr_file_pages 889592
+1
+nr_file_pages 847302
+nr_file_pages 888741
+1
+nr_file_pages 847294
+nr_file_pages 888809
+1
+nr_file_pages 847306
+nr_file_pages 888854
+1
+nr_file_pages 847380
+nr_file_pages 889625
+1
+nr_file_pages 847525
+nr_file_pages 888816
+1
+nr_file_pages 847349
+nr_file_pages 888864
+
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 16 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 16 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 16 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 16 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-16-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 32 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 32 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 32 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches1
+nr_file_pages 847750
+nr_file_pages 890968
+1
+nr_file_pages 847419
+nr_file_pages 888873
+1
+nr_file_pages 847527
+nr_file_pages 888906
+1
+nr_file_pages 847449
+nr_file_pages 889058
+1
+nr_file_pages 847499
+nr_file_pages 892481
+1
+nr_file_pages 847472
+nr_file_pages 888901
+1
+nr_file_pages 847458
+nr_file_pages 888903
+1
+
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 32 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 32 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-32-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 64 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 64 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 64 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 64 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 64 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-64-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:nr_file_pages 847418
+nr_file_pages 888959
+1
+nr_file_pages 847619
+nr_file_pages 889918
+1
+nr_file_pages 847605
+nr_file_pages 889100
+1
+nr_file_pages 847648
+nr_file_pages 888889
+1
+nr_file_pages 847993
+nr_file_pages 890052
+1
+nr_file_pages 847661
+nr_file_pages 889003
+1
+nr_file_pages 848039
+nr_file_pages 888948
+1
+grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 128 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 128 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 128 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 128 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 128 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-128-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 256 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 256 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:nr_file_pages 847967
+nr_file_pages 889983
+1
+nr_file_pages 847582
+nr_file_pages 889147
+1
+nr_file_pages 847654
+grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 256 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 256 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-cpu-trace/cpu-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-mem-trace/mem-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-page-cache-trace/page-caceh-trace-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench weaviate --skip-drop-old --skip-load --no-auth --case-type Performance1536D500K --k 10 --num-concurrency 256 --url http://localhost:8083 --m 16 --ef-construction 200 --ef 14 > results-performance/weaviate-hnsw-openai-500k/weaviate-hnsw-openai-500k-output/vdb-bench-openai-500k-con-256-k-10-m-16-efconstruct-200-ef-14-rep-4.log 2>&1
+Results:
+QPS:  {1: [29.2444, 30.8173, 30.5616, 30.6984, 30.7568], 2: [61.4619, 61.3605, 61.9329, 61.4451, 61.4699], 4: [125.5558, 124.6817, 124.262, 124.6707, 124.659], 8: [274.365, 276.7215, 274.7808, 275.3707, 274.8811], 16: [868.1012, 1078.2011, 980.1982, 866.5373, 867.6926], 32: [1024.8122, 1020.9497, 1014.9342, 1013.9594, 1028.6589], 64: [985.6755, 982.4971, 983.6297, 981.6575, 989.5313], 128: [890.7224, 944.9312, 933.799, 950.5452, 943.5871], 256: [907.8294, 921.7523, 899.0366, 903.9683, 905.3235]}
+Latency:  {1: [33.5, 34.7, 33.4, 33.5, 33.7], 2: [33.6, 33.8, 33.7, 33.5, 33.5], 4: [33.6, 33.6, 33.5, 33.5, 33.5], 8: [33.5, 33.5, 33.7, 33.5, 33.5], 16: [33.5, 33.6, 33.5, 33.4, 33.4], 32: [33.5, 33.8, 33.5, 33.6, 33.4], 64: [33.6, 33.6, 33.7, 33.4, 33.7], 128: [34.6, 34.5, 34.8, 33.9, 34.6], 256: [33.8, 35.5, 36.2, 35.9, 36.4]}
+Recall:  {1: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 2: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 4: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 8: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 16: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 32: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 64: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 128: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672], 256: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672]}
+Average:
+QPS Average: [30.415699999999998, 61.53406, 124.76584, 275.22382000000005, 932.1460800000001, 1020.6628799999999, 984.5982200000001, 932.7169799999999, 907.58202]
+QPS Std Dev: [0.5917400713151004, 0.20319147226200066, 0.4255437679017296, 0.8143604396088943, 85.09005212727047, 5.638969350297964, 2.8105650979117964, 21.679057285998393, 7.642540414652703]
+Latency Average: [33.760000000000005, 33.620000000000005, 33.54, 33.54, 33.480000000000004, 33.56, 33.6, 34.48, 35.56]
+Latency Std Dev: [0.48000000000000126, 0.11661903789690546, 0.04898979485566426, 0.08000000000000114, 0.07483314773547989, 0.13564659966250478, 0.10954451150103478, 0.30594117081556726, 0.9308061022576087]
+Recall Average: [0.7672, 0.7672, 0.7672, 0.7672, 0.7672, 0.7672, 0.7672, 0.7672, 0.7672]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 30.42 ± 0.59
+  Latency: 33.76 ± 0.48
+  Recall: 0.77 ± 0.00
+concurrency=2:
+  QPS: 61.53 ± 0.20
+  Latency: 33.62 ± 0.12
+  Recall: 0.77 ± 0.00
+concurrency=4:
+  QPS: 124.77 ± 0.43
+  Latency: 33.54 ± 0.05
+  Recall: 0.77 ± 0.00
+concurrency=8:
+  QPS: 275.22 ± 0.81
+  Latency: 33.54 ± 0.08
+  Recall: 0.77 ± 0.00
+concurrency=16:
+  QPS: 932.15 ± 85.09
+  Latency: 33.48 ± 0.07
+  Recall: 0.77 ± 0.00
+concurrency=32:
+  QPS: 1020.66 ± 5.64
+  Latency: 33.56 ± 0.14
+  Recall: 0.77 ± 0.00
+concurrency=64:
+  QPS: 984.60 ± 2.81
+  Latency: 33.60 ± 0.11
+  Recall: 0.77 ± 0.00
+concurrency=128:
+  QPS: 932.72 ± 21.68
+  Latency: 34.48 ± 0.31
+  Recall: 0.77 ± 0.00
+concurrency=256:
+  QPS: 907.58 ± 7.64
+  Latency: 35.56 ± 0.93
+  Recall: 0.77 ± 0.00
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-performance/weaviate-hnsw-openai-500k

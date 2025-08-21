@@ -1,0 +1,40 @@
+nohup: ignoring input
+[INFO] Starting parameter search for IVF k-probe...
+[INFO] min probe = 1
+[INFO] max probe = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 1 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-1.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 100 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-100.txt 2>&1
+[RESULT] probe = 1, recall = 0.4703
+[RESULT] probe = 100, recall = 0.9739
+[INFO] Testing probe = 50
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 50 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-50.txt 2>&1
+[RESULT] probe = 50, recall = 0.9451
+[INFO] Testing probe = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 25 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-25.txt 2>&1
+[RESULT] probe = 25, recall = 0.9026
+[INFO] Testing probe = 13
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 13 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-13.txt 2>&1
+[RESULT] probe = 13, recall = 0.8481
+[INFO] evaluate probe_min = cur_probe + 1 = 14
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 14 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-14.txt 2>&1
+[RESULT] probe_min = 14, recall = 0.8554
+[INFO] Testing probe = 19
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 19 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-19.txt 2>&1
+[RESULT] probe = 19, recall = 0.8819
+[INFO] evaluate probe_min = cur_probe + 1 = 20
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 20 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-20.txt 2>&1
+[RESULT] probe_min = 20, recall = 0.8853
+[INFO] Testing probe = 22
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 22 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-22.txt 2>&1
+[RESULT] probe = 22, recall = 0.8928
+[INFO] evaluate probe_min = cur_probe + 1 = 23
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 23 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-23.txt 2>&1
+[RESULT] probe_min = 23, recall = 0.8967
+[INFO] Testing probe = 24
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 24 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-24.txt 2>&1
+[RESULT] probe = 24, recall = 0.8998
+[INFO] evaluate probe_min = cur_probe + 1 = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusivfflat --skip-drop-old --skip-load --db-label milvus_ivf_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19531 --password "" --lists 4000 --probes 25 > results-ivf-para-search-kprobe-Performance768D1M/ivf-para-search-Performance768D1M-probe-25.txt 2>&1
+[RESULT] probe_min = 25, recall = 0.9026
+[INFO] Final probe value: probe = 25, recall = 0.9026
+[INFO] Final probe value: probe = 25, recall = 0.9026

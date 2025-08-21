@@ -1,0 +1,33 @@
+2025-06-14 04:07:44,924 | [92mINFO[0m: [92mTask:
+TaskConfig(db=<DB.LanceDB: 'LanceDB'>, db_config=LanceDBConfig(db_label='2025-06-14T04:07:44.885941', version='', note='', uri='/mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-500k', token=None), db_case_config=LanceDBHNSWIndexConfig(index=<IndexType.HNSW: 'HNSW'>, metric_type=<MetricType.L2: 'L2'>, num_partitions=0, num_sub_vectors=0, nbits=8, sample_rate=256, max_iterations=50, nprobes=0, m=16, ef_construction=200, ef=10), case_config=CaseConfig(case_id=<CaseType.Performance1536D500K: 10>, custom_case={}, k=10, concurrency_search_config=ConcurrencySearchConfig(num_concurrency=[1], concurrency_duration=30, concurrency_timeout=3600)), stages=['search_serial', 'search_concurrent'])
+[0m (cli.py:516) (546381)
+2025-06-14 04:07:44,924 | [92mINFO[0m: [92mgenerated uuid for the tasks: 81f4241b1d794cf885ca0277c391afaa[0m (interface.py:72) (546381)
+2025-06-14 04:07:45,069 | INFO | DB             | CaseType     Dataset               Filter | task_label (task_runner.py:340)
+2025-06-14 04:07:45,069 | INFO | -----------    | ------------ -------------------- ------- | -------    (task_runner.py:340)
+2025-06-14 04:07:45,069 | INFO | LanceDB-2025-06-14T04:07:44.885941 | Performance  OpenAI-MEDIUM-500K      None | 81f4241b1d794cf885ca0277c391afaa (task_runner.py:340)
+2025-06-14 04:07:45,070 | [92mINFO[0m: [92mtask submitted: id=81f4241b1d794cf885ca0277c391afaa, 81f4241b1d794cf885ca0277c391afaa, case number: 1[0m (interface.py:242) (546381)
+2025-06-14 04:07:45,795 | [92mINFO[0m: [92m[1/1] start case: {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'OpenAI', 'size': 500000, 'dim': 1536, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'LanceDB-2025-06-14T04:07:44.885941'}, drop_old=False[0m (interface.py:172) (546405)
+2025-06-14 04:07:45,795 | [92mINFO[0m: [92mStarting run[0m (task_runner.py:105) (546405)
+2025-06-14 04:07:45,935 | [92mINFO[0m: [92mSearch config: {'ef': 10}[0m (lancedb.py:38) (546405)
+2025-06-14 04:07:46,230 | [92mINFO[0m: [92mlocal dataset root path not exist, creating it: /mnt/vectordb/nvme0n1/vectordb-bench-dataset/openai/openai_medium_500k[0m (data_source.py:124) (546405)
+2025-06-14 04:07:46,230 | [92mINFO[0m: [92mStart to downloading files, total count: 3[0m (data_source.py:140) (546405)
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [11:35<23:10, 695.00s/it] 67%|██████▋   | 2/3 [11:35<04:46, 286.52s/it]100%|██████████| 3/3 [11:37<00:00, 156.42s/it]100%|██████████| 3/3 [11:37<00:00, 232.40s/it]
+2025-06-14 04:19:23,426 | [92mINFO[0m: [92mSucceed to download all files, downloaded file count = 3[0m (data_source.py:145) (546405)
+2025-06-14 04:19:23,426 | [92mINFO[0m: [92mRead the entire file into memory: test.parquet[0m (dataset.py:251) (546405)
+2025-06-14 04:19:23,537 | [92mINFO[0m: [92mRead the entire file into memory: neighbors.parquet[0m (dataset.py:251) (546405)
+2025-06-14 04:19:23,616 | [92mINFO[0m: [92mStart performance case[0m (task_runner.py:147) (546405)
+2025-06-14 04:19:24,473 | [92mINFO[0m: [92mStart search 30s in concurrency 1, filters: None[0m (mp_runner.py:118) (546405)
+2025-06-14 04:19:25,542 | [92mINFO[0m: [92mSyncing all process and start concurrency search, concurrency=1[0m (mp_runner.py:125) (546405)
+2025-06-14 04:19:55,885 | [92mINFO[0m: [92mSpawnProcess-1:2 search 30s: actual_dur=30.3247s, count=864, qps in this process: 28.4916[0m (mp_runner.py:91) (549960)
+2025-06-14 04:19:55,888 | [92mINFO[0m: [92mEnd search in concurrency 1: dur=30.344649455000763s, total_count=864, qps=28.4729[0m (mp_runner.py:139) (546405)
+2025-06-14 04:19:56,330 | [92mINFO[0m: [92mUpdate largest qps with concurrency 1: current max_qps=28.4729[0m (mp_runner.py:143) (546405)
+2025-06-14 04:19:57,336 | [92mINFO[0m: [92mSpawnProcess-1:3 start search the entire test_data to get recall and latency[0m (serial_runner.py:206) (550091)
+2025-06-14 04:20:37,252 | [92mINFO[0m: [92mSpawnProcess-1:3 search entire test_data: cost=33.447s, queries=1000, avg_recall=0.7195, avg_ndcg=0.7465,avg_latency=0.0334, p99=0.0346[0m (serial_runner.py:251) (550091)
+2025-06-14 04:20:37,510 | [92mINFO[0m: [92mPerformance case got result: Metric(max_load_count=0, load_duration=0.0, qps=28.4729, serial_latency_p99=np.float64(0.0346), recall=np.float64(0.7195), ndcg=np.float64(0.7465), conc_num_list=[1], conc_qps_list=[28.4729], conc_latency_p99_list=[np.float64(0.037020169309544146)], conc_latency_avg_list=[np.float64(0.034725621486114945)])[0m (task_runner.py:186) (546405)
+2025-06-14 04:20:37,511 | [92mINFO[0m: [92m[1/1] finish case: {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'OpenAI', 'size': 500000, 'dim': 1536, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'LanceDB-2025-06-14T04:07:44.885941'}, result=Metric(max_load_count=0, load_duration=0.0, qps=28.4729, serial_latency_p99=np.float64(0.0346), recall=np.float64(0.7195), ndcg=np.float64(0.7465), conc_num_list=[1], conc_qps_list=[28.4729], conc_latency_p99_list=[np.float64(0.037020169309544146)], conc_latency_avg_list=[np.float64(0.034725621486114945)]), label=ResultLabel.NORMAL[0m (interface.py:174) (546405)
+2025-06-14 04:20:37,511 | INFO |Task summary: run_id=81f42, task_label=81f4241b1d794cf885ca0277c391afaa (models.py:375)
+2025-06-14 04:20:37,511 | INFO |DB      | db_label                      case                 label                            | load_dur    qps        latency(p99)    recall        max_load_count | label (models.py:375)
+2025-06-14 04:20:37,511 | INFO |------- | ----------------------------- -------------------- -------------------------------- | ----------- ---------- --------------- ------------- -------------- | ----- (models.py:375)
+2025-06-14 04:20:37,511 | INFO |LanceDB | 2025-06-14T04:07:44.885941    Performance1536D500K 81f4241b1d794cf885ca0277c391afaa | 0.0         28.4729    0.0346          0.7195        0              | :)    (models.py:375)
+2025-06-14 04:20:37,512 | [92mINFO[0m: [92mwrite results to disk /home/zebin/2025-vectordb-bench-new/VectorDBBench-dev/vectordb_bench/results/LanceDB/result_20250614_81f4241b1d794cf885ca0277c391afaa_lancedb.json[0m (models.py:243) (546405)
+2025-06-14 04:20:37,514 | [92mINFO[0m: [92mSuccess to finish task: label=81f4241b1d794cf885ca0277c391afaa, run_id=81f4241b1d794cf885ca0277c391afaa[0m (interface.py:213) (546405)

@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 2672987
+1
+nr_file_pages 117848
+nr_file_pages 181357
+1
+nr_file_pages 117955
+nr_file_pages 194236
+1
+nr_file_pages 118006
+nr_file_pages 177103
+1
+nr_file_pages 118060
+nr_file_pages 177675
+1
+nr_file_pages 118025
+nr_file_pages 177600
+1
+nr_file_pages 118009
+nr_file_pages 177551
+1
+nr_file_pages 118022
+Result directory already exists: results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output
+Result directory already exists: results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace
+Result directory already exists: results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace
+Result directory already exists: results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-1-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-1-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-1-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 1 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-1-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-searchlist-10-rep-1.log 2>&1
+nr_file_pages 177689
+1
+nr_file_pages 118039
+nr_file_pages 178483
+1
+nr_file_pages 118104
+nr_file_pages 177574
+1
+nr_file_pages 118042
+nr_file_pages 177666
+1
+nr_file_pages 118199
+nr_file_pages 177721
+1
+nr_file_pages 118201
+nr_file_pages 177827
+1
+nr_file_pages 118174
+nr_file_pages 177326
+1
+nr_file_pages 118280
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-2-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-2-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-2-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 2 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-2-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-searchlist-10-rep-3.log 2>&1
+nr_file_pages 178699
+1
+nr_file_pages 118334
+nr_file_pages 177811
+1
+nr_file_pages 118281
+nr_file_pages 177904
+1
+nr_file_pages 118253
+nr_file_pages 177998
+1
+nr_file_pages 118722
+nr_file_pages 178012
+1
+nr_file_pages 118484
+nr_file_pages 178252
+1
+nr_file_pages 118482
+nr_file_pages 177938
+1
+nr_file_pages 118562
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-4-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-4-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-4-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 4 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-4-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-8-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-8-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-8-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 8 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-8-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-searchlist-10-rep-0.log 2>&1
+nr_file_pages 178960
+1
+nr_file_pages 118500
+nr_file_pages 178312
+1
+nr_file_pages 118540
+nr_file_pages 178100
+1
+nr_file_pages 118570
+nr_file_pages 178242
+1
+nr_file_pages 118470
+nr_file_pages 178191
+1
+nr_file_pages 118541
+nr_file_pages 178216
+1
+nr_file_pages 118567
+nr_file_pages 179216
+1
+nr_file_pages 118598
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-16-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-16-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-16-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 16 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-16-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-searchlist-10-rep-2.log 2>&1
+nr_file_pages 178411
+1
+nr_file_pages 118644
+nr_file_pages 178244
+1
+nr_file_pages 118594
+nr_file_pages 178290
+1
+nr_file_pages 118701
+nr_file_pages 178251
+1
+nr_file_pages 118663
+nr_file_pages 178344
+1
+nr_file_pages 118726
+nr_file_pages 179228
+1
+nr_file_pages 118614
+nr_file_pages 178424
+1
+nr_file_pages 118685
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-32-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-32-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-32-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 32 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-32-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-64-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-64-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-64-k-10-searchlist-10-rep-4.log 2>&1
+nr_file_pages 178474
+1
+nr_file_pages 118705
+nr_file_pages 178434
+1
+nr_file_pages 118741
+nr_file_pages 178397
+1
+nr_file_pages 118626
+nr_file_pages 178347
+1
+nr_file_pages 118732
+nr_file_pages 179317
+1
+nr_file_pages 118696
+nr_file_pages 178388
+1
+nr_file_pages 118617
+nr_file_pages 178426
+1
+nr_file_pages 118657
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 64 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-64-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-searchlist-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-128-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-128-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-128-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 128 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-128-k-10-searchlist-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-searchlist-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-searchlist-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-searchlist-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-searchlist-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-searchlist-10-rep-1.log 2>&1
+nr_file_pages 178582
+1
+nr_file_pages 118687
+nr_file_pages 179349
+1
+nr_file_pages 118669
+nr_file_pages 178518
+1
+nr_file_pages 118738
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-searchlist-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-searchlist-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-searchlist-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-searchlist-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-searchlist-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-searchlist-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-searchlist-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-cpu-trace/cpu-trace-cohere-1m-con-256-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-mem-trace/mem-trace-cohere-1m-con-256-k-10-searchlist-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-page-cache-trace/page-caceh-trace-cohere-1m-con-256-k-10-searchlist-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --case-type Performance768D1M  --db-label milvus_diskann_cohere_1m --k 10 --num-concurrency 256 --uri http://localhost:19539 --password '' --search-list 10 > results-performance/milvus-diskann-cohere-1m/milvus-diskann-cohere-1m-output/vdb-bench-cohere-1m-con-256-k-10-searchlist-10-rep-4.log 2>&1
+Results:
+QPS:  {1: [127.1825, 127.4522, 126.2958, 126.3597, 127.59], 2: [267.5348, 269.027, 267.608, 268.7794, 267.5257], 4: [1017.1507, 993.4759, 1225.0664, 1408.2907, 1188.9535], 8: [2816.788, 2810.2044, 2813.6944, 2817.0577, 2812.1572], 16: [3649.2122, 3331.4021, 3663.0056, 3657.8978, 3666.0172], 32: [4084.4374, 3887.4548, 3729.9847, 4082.5065, 4084.5388], 64: [4355.2744, 4346.8183, 3976.8102, 4350.4049, 4346.3391], 128: [4439.8553, 4452.7488, 4424.4208, 4050.7636, 4412.5261], 256: [3930.4334, 3895.3201, 3912.4481, 4306.9074, 3944.1578]}
+Latency:  {1: [10.1, 9.2, 9.299999999999999, 9.2, 9.4], 2: [9.4, 9.5, 9.299999999999999, 9.4, 9.4], 4: [9.5, 9.6, 9.700000000000001, 9.299999999999999, 9.299999999999999], 8: [9.6, 9.700000000000001, 9.0, 9.1, 9.2], 16: [9.299999999999999, 9.1, 9.6, 9.700000000000001, 9.2], 32: [9.0, 9.4, 9.1, 9.0, 9.5], 64: [9.299999999999999, 9.2, 9.2, 9.2, 9.299999999999999], 128: [9.0, 9.2, 9.0, 9.0, 9.1], 256: [9.4, 9.0, 9.299999999999999, 9.4, 9.2]}
+Recall:  {1: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 2: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 4: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 8: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 16: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 32: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 64: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 128: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426], 256: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426]}
+Average:
+QPS Average: [126.97604000000001, 268.09497999999996, 1166.58744, 2813.9803399999996, 3593.5069799999997, 3973.7844399999994, 4275.12938, 4356.06292, 3997.85336]
+QPS Std Dev: [0.5456926629523263, 0.6651500414192268, 151.4195759076296, 2.6463719795976606, 131.17622310593342, 143.6817400458471, 149.19389181276034, 153.25657413873503, 155.40282600540576]
+Latency Average: [9.44, 9.399999999999999, 9.48, 9.319999999999999, 9.38, 9.2, 9.239999999999998, 9.06, 9.26]
+Latency Std Dev: [0.3382306905057554, 0.06324555320336793, 0.16000000000000072, 0.27856776554368273, 0.231516738055805, 0.2097617696340304, 0.04898979485566339, 0.07999999999999972, 0.14966629547095778]
+Recall Average: [0.9426, 0.9426, 0.9426, 0.9426, 0.9426, 0.9426, 0.9426, 0.9426, 0.9426]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 126.98 ± 0.55
+  Latency: 9.44 ± 0.34
+  Recall: 0.94 ± 0.00
+concurrency=2:
+  QPS: 268.09 ± 0.67
+  Latency: 9.40 ± 0.06
+  Recall: 0.94 ± 0.00
+concurrency=4:
+  QPS: 1166.59 ± 151.42
+  Latency: 9.48 ± 0.16
+  Recall: 0.94 ± 0.00
+concurrency=8:
+  QPS: 2813.98 ± 2.65
+  Latency: 9.32 ± 0.28
+  Recall: 0.94 ± 0.00
+concurrency=16:
+  QPS: 3593.51 ± 131.18
+  Latency: 9.38 ± 0.23
+  Recall: 0.94 ± 0.00
+concurrency=32:
+  QPS: 3973.78 ± 143.68
+  Latency: 9.20 ± 0.21
+  Recall: 0.94 ± 0.00
+concurrency=64:
+  QPS: 4275.13 ± 149.19
+  Latency: 9.24 ± 0.05
+  Recall: 0.94 ± 0.00
+concurrency=128:
+  QPS: 4356.06 ± 153.26
+  Latency: 9.06 ± 0.08
+  Recall: 0.94 ± 0.00
+concurrency=256:
+  QPS: 3997.85 ± 155.40
+  Latency: 9.26 ± 0.15
+  Recall: 0.94 ± 0.00
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-performance/milvus-diskann-cohere-1m

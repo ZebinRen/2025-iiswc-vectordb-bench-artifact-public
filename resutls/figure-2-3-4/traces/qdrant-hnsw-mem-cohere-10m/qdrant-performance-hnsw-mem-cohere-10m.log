@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 9809537
+1
+nr_file_pages 8799163
+nr_file_pages 8857081
+1
+nr_file_pages 8799217
+nr_file_pages 8856092
+1
+nr_file_pages 8799258
+nr_file_pages 8855806
+1
+nr_file_pages 8798486
+nr_file_pages 8857518
+1
+nr_file_pages 8798477
+nr_file_pages 8856304
+1
+nr_file_pages 8798584
+nr_file_pages 8855491
+1
+nr_file_pages 8798494
+Result directory already exists: results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output
+Result directory already exists: results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace
+Result directory already exists: results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace
+Result directory already exists: results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 1 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 2 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1nr_file_pages 8855384
+1
+nr_file_pages 8798208
+nr_file_pages 8855440
+1
+nr_file_pages 8798457
+nr_file_pages 8856706
+1
+nr_file_pages 8798486
+nr_file_pages 8858039
+1
+nr_file_pages 8799169
+nr_file_pages 8856496
+1
+nr_file_pages 8799277
+nr_file_pages 8856438
+1
+nr_file_pages 8799144
+nr_file_pages 8856647
+1
+nr_file_pages 8799234
+
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 2 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 2 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 2 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 2 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 4 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 4 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 4 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1nr_file_pages 8856756
+1
+nr_file_pages 8798541
+nr_file_pages 8858079
+1
+nr_file_pages 8799301
+nr_file_pages 8856570
+1
+nr_file_pages 8799243
+nr_file_pages 8861472
+1
+nr_file_pages 8800105
+nr_file_pages 8858179
+1
+nr_file_pages 8798416
+nr_file_pages 8856394
+1
+nr_file_pages 8798419
+nr_file_pages 8856891
+1
+
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 4 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 4 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 8 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 8 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 8 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 8 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 8 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstatnr_file_pages 8799189
+nr_file_pages 8856291
+1
+nr_file_pages 8798938
+nr_file_pages 8856706
+1
+nr_file_pages 8798426
+nr_file_pages 8856780
+1
+nr_file_pages 8799243
+nr_file_pages 8857512
+1
+nr_file_pages 8799082
+nr_file_pages 8856829
+1
+nr_file_pages 8799310
+nr_file_pages 8856452
+1
+nr_file_pages 8798388
+
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 16 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 16 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 16 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 16 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 16 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 32 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 32 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1nr_file_pages 8856682
+1
+nr_file_pages 8798810
+nr_file_pages 8857056
+1
+nr_file_pages 8799239
+nr_file_pages 8856453
+1
+nr_file_pages 8798415
+nr_file_pages 8855410
+1
+nr_file_pages 8798492
+nr_file_pages 8855501
+1
+nr_file_pages 8798159
+nr_file_pages 8855525
+1
+nr_file_pages 8798231
+nr_file_pages 8856332
+1
+nr_file_pages 8798358
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 32 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 32 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 32 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 64 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 64 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 64 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 64 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1nr_file_pages 8855475
+1
+nr_file_pages 8798320
+nr_file_pages 8856412
+1
+nr_file_pages 8800384
+nr_file_pages 8858947
+1
+nr_file_pages 8798344
+nr_file_pages 8857742
+1
+nr_file_pages 8799452
+nr_file_pages 8856616
+1
+nr_file_pages 8798184
+nr_file_pages 8855611
+1
+nr_file_pages 8798383
+nr_file_pages 8852825
+1
+nr_file_pages 8798593
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 64 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 128 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 128 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 128 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 128 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 128 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 256 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-0.log 2>&1nr_file_pages 8856171
+1
+nr_file_pages 8798432
+nr_file_pages 8856555
+1
+nr_file_pages 8798327
+nr_file_pages 8855572
+1
+nr_file_pages 8798406
+nr_file_pages 8855738
+1
+nr_file_pages 8798369
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 256 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 256 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 256 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench qdrantlocal --skip-drop-old --skip-load --case-type Performance768D10M --k 10 --num-concurrency 256 --url http://localhost:6335 --grpc-port 6336 --m 16 --ef-construct 200 --hnsw-ef 43 > results-performance/qdrant-hnsw-mem-cohere-10m/qdrant-hnsw-mem-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-m-16-efconstruct-200-efsearch-43-rep-4.log 2>&1
+Results:
+QPS:  {1: [78.278, 80.1838, 81.0068, 78.3464, 79.205], 2: [187.4927, 188.2567, 190.4636, 189.7292, 191.1473], 4: [452.2174, 453.0562, 452.2522, 414.3421, 454.3418], 8: [665.6896, 672.5805, 670.1545, 670.6862, 605.7598], 16: [856.9134, 859.8781, 780.7337, 855.5402, 857.0133], 32: [945.1741, 948.3453, 945.9752, 947.8502, 944.6948], 64: [890.21, 885.1107, 881.8645, 925.4118, 964.9186], 128: [952.6718, 950.6766, 949.695, 948.8159, 874.3512], 256: [916.2081, 916.5655, 834.5983, 836.0635, 836.0356]}
+Latency:  {1: [13.700000000000001, 13.799999999999999, 13.899999999999999, 13.5, 14.1], 2: [14.200000000000001, 13.899999999999999, 13.700000000000001, 13.899999999999999, 14.3], 4: [14.4, 14.1, 13.899999999999999, 14.1, 14.5], 8: [13.799999999999999, 14.200000000000001, 14.7, 14.200000000000001, 14.3], 16: [13.700000000000001, 14.200000000000001, 13.4, 14.1, 14.0], 32: [13.899999999999999, 14.6, 14.0, 13.899999999999999, 13.799999999999999], 64: [14.200000000000001, 13.799999999999999, 14.200000000000001, 14.1, 13.4], 128: [13.5, 13.899999999999999, 14.0, 13.6, 13.700000000000001], 256: [13.899999999999999, 13.6, 13.899999999999999, 13.799999999999999, 13.799999999999999]}
+Recall:  {1: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 2: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 4: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 8: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 16: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 32: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 64: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 128: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055], 256: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055]}
+Average:
+QPS Average: [79.404, 189.4179, 445.24194, 656.9741200000001, 842.01574, 946.40792, 909.50312, 935.2421, 867.8942000000001]
+QPS Std Dev: [1.0585887435638057, 1.3591174356912643, 15.469137085642487, 25.706687131048202, 30.673540483785047, 1.4476153762653892, 31.79644467945432, 30.472460681736905, 39.59775041630521]
+Latency Average: [13.8, 14.0, 14.2, 14.24, 13.88, 14.040000000000001, 13.940000000000001, 13.74, 13.8]
+Latency Std Dev: [0.19999999999999965, 0.21908902300206679, 0.21908902300206698, 0.28705400188814656, 0.2925747767665558, 0.2870540018881468, 0.30724582991474464, 0.18547236990991384, 0.10954451150103282]
+Recall Average: [0.9055, 0.9055, 0.9055, 0.9055, 0.9055, 0.9055, 0.9055, 0.9055, 0.9055]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 79.40 ± 1.06
+  Latency: 13.80 ± 0.20
+  Recall: 0.91 ± 0.00
+concurrency=2:
+  QPS: 189.42 ± 1.36
+  Latency: 14.00 ± 0.22
+  Recall: 0.91 ± 0.00
+concurrency=4:
+  QPS: 445.24 ± 15.47
+  Latency: 14.20 ± 0.22
+  Recall: 0.91 ± 0.00
+concurrency=8:
+  QPS: 656.97 ± 25.71
+  Latency: 14.24 ± 0.29
+  Recall: 0.91 ± 0.00
+concurrency=16:
+  QPS: 842.02 ± 30.67
+  Latency: 13.88 ± 0.29
+  Recall: 0.91 ± 0.00
+concurrency=32:
+  QPS: 946.41 ± 1.45
+  Latency: 14.04 ± 0.29
+  Recall: 0.91 ± 0.00
+concurrency=64:
+  QPS: 909.50 ± 31.80
+  Latency: 13.94 ± 0.31
+  Recall: 0.91 ± 0.00
+concurrency=128:
+  QPS: 935.24 ± 30.47
+  Latency: 13.74 ± 0.19
+  Recall: 0.91 ± 0.00
+concurrency=256:
+  QPS: 867.89 ± 39.60
+  Latency: 13.80 ± 0.11
+  Recall: 0.91 ± 0.00
+TYPE 1 FONTS ENABLED
+Created result directory: figures-performance/qdrant-hnsw-mem-cohere-10m

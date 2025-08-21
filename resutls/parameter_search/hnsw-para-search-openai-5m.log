@@ -1,0 +1,8 @@
+[INFO] Starting parameter search for HNSW efsearch...
+[INFO] min efsearch = 10
+[INFO] max efsearch = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19538 --password "" --m 16 --ef-construction 200 --ef-search 10 > results-hnsw-para-search-efsearch-Performance1536D5M/hnsw-para-search-Performance1536D5M-efsearch-10.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_openai_5m --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri http://localhost:19538 --password "" --m 16 --ef-construction 200 --ef-search 100 > results-hnsw-para-search-efsearch-Performance1536D5M/hnsw-para-search-Performance1536D5M-efsearch-100.txt 2>&1
+[RESULT] efsearch = 10, recall = 0.9077
+[RESULT] efsearch = 100, recall = 0.9938
+efsearch 10 already meets the target recall of 0.9. No further search needed.

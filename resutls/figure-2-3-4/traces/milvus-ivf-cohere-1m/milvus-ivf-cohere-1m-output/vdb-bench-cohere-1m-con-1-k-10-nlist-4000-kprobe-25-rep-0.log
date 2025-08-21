@@ -1,0 +1,32 @@
+2025-06-08 13:14:38,825 | [92mINFO[0m: [92mTask:
+TaskConfig(db=<DB.Milvus: 'Milvus'>, db_config=MilvusConfig(db_label='milvus_ivf_cohere_1m', version='', note='', uri=SecretStr('**********'), user=None, password=SecretStr(''), num_shards=1), db_case_config=IVFFlatConfig(index=<IndexType.IVFFlat: 'IVF_FLAT'>, metric_type=None, nlist=4000, nprobe=25), case_config=CaseConfig(case_id=<CaseType.Performance768D1M: 5>, custom_case={}, k=10, concurrency_search_config=ConcurrencySearchConfig(num_concurrency=[1], concurrency_duration=30, concurrency_timeout=3600)), stages=['search_serial', 'search_concurrent'])
+[0m (cli.py:516) (3653)
+2025-06-08 13:14:38,826 | [92mINFO[0m: [92mgenerated uuid for the tasks: f86022098ee341b8b5fc9f5cbf2ff774[0m (interface.py:72) (3653)
+2025-06-08 13:14:38,973 | INFO | DB             | CaseType     Dataset               Filter | task_label (task_runner.py:340)
+2025-06-08 13:14:38,973 | INFO | -----------    | ------------ -------------------- ------- | -------    (task_runner.py:340)
+2025-06-08 13:14:38,973 | INFO | Milvus-milvus_ivf_cohere_1m | Performance  Cohere-MEDIUM-1M        None | f86022098ee341b8b5fc9f5cbf2ff774 (task_runner.py:340)
+2025-06-08 13:14:38,973 | [92mINFO[0m: [92mtask submitted: id=f86022098ee341b8b5fc9f5cbf2ff774, f86022098ee341b8b5fc9f5cbf2ff774, case number: 1[0m (interface.py:242) (3653)
+2025-06-08 13:14:39,697 | [92mINFO[0m: [92m[1/1] start case: {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'Cohere', 'size': 1000000, 'dim': 768, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'Milvus-milvus_ivf_cohere_1m'}, drop_old=False[0m (interface.py:172) (3689)
+2025-06-08 13:14:39,697 | [92mINFO[0m: [92mStarting run[0m (task_runner.py:105) (3689)
+2025-06-08 13:14:40,461 | [92mINFO[0m: [92mlocal dataset root path not exist, creating it: /tmp/vectordb_bench/dataset/cohere/cohere_medium_1m[0m (data_source.py:124) (3689)
+2025-06-08 13:14:40,461 | [92mINFO[0m: [92mStart to downloading files, total count: 3[0m (data_source.py:140) (3689)
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [02:31<05:03, 151.83s/it] 67%|██████▋   | 2/3 [02:32<01:02, 62.69s/it] 100%|██████████| 3/3 [02:32<00:00, 34.25s/it]100%|██████████| 3/3 [02:32<00:00, 50.84s/it]
+2025-06-08 13:17:12,988 | [92mINFO[0m: [92mSucceed to download all files, downloaded file count = 3[0m (data_source.py:145) (3689)
+2025-06-08 13:17:12,988 | [92mINFO[0m: [92mRead the entire file into memory: test.parquet[0m (dataset.py:251) (3689)
+2025-06-08 13:17:13,089 | [92mINFO[0m: [92mRead the entire file into memory: neighbors.parquet[0m (dataset.py:251) (3689)
+2025-06-08 13:17:13,160 | [92mINFO[0m: [92mStart performance case[0m (task_runner.py:147) (3689)
+2025-06-08 13:17:13,955 | [92mINFO[0m: [92mStart search 30s in concurrency 1, filters: None[0m (mp_runner.py:118) (3689)
+2025-06-08 13:17:14,995 | [92mINFO[0m: [92mSyncing all process and start concurrency search, concurrency=1[0m (mp_runner.py:125) (3689)
+2025-06-08 13:17:45,024 | [92mINFO[0m: [92mSpawnProcess-1:2 search 30s: actual_dur=30.0044s, count=3680, qps in this process: 122.6487[0m (mp_runner.py:91) (4999)
+2025-06-08 13:17:45,030 | [92mINFO[0m: [92mEnd search in concurrency 1: dur=30.034504158000345s, total_count=3680, qps=122.5257[0m (mp_runner.py:139) (3689)
+2025-06-08 13:17:45,422 | [92mINFO[0m: [92mUpdate largest qps with concurrency 1: current max_qps=122.5257[0m (mp_runner.py:143) (3689)
+2025-06-08 13:17:46,321 | [92mINFO[0m: [92mSpawnProcess-1:3 start search the entire test_data to get recall and latency[0m (serial_runner.py:206) (5363)
+2025-06-08 13:17:59,995 | [92mINFO[0m: [92mSpawnProcess-1:3 search entire test_data: cost=8.3049s, queries=1000, avg_recall=0.9026, avg_ndcg=0.9108,avg_latency=0.0083, p99=0.0097[0m (serial_runner.py:251) (5363)
+2025-06-08 13:18:00,221 | [92mINFO[0m: [92mPerformance case got result: Metric(max_load_count=0, load_duration=0.0, qps=122.5257, serial_latency_p99=np.float64(0.0097), recall=np.float64(0.9026), ndcg=np.float64(0.9108), conc_num_list=[1], conc_qps_list=[122.5257], conc_latency_p99_list=[np.float64(0.009426819249988512)], conc_latency_avg_list=[np.float64(0.00814220575108839)])[0m (task_runner.py:186) (3689)
+2025-06-08 13:18:00,221 | [92mINFO[0m: [92m[1/1] finish case: {'label': <CaseLabel.Performance: 2>, 'dataset': {'data': {'name': 'Cohere', 'size': 1000000, 'dim': 768, 'metric_type': <MetricType.COSINE: 'COSINE'>}}, 'db': 'Milvus-milvus_ivf_cohere_1m'}, result=Metric(max_load_count=0, load_duration=0.0, qps=122.5257, serial_latency_p99=np.float64(0.0097), recall=np.float64(0.9026), ndcg=np.float64(0.9108), conc_num_list=[1], conc_qps_list=[122.5257], conc_latency_p99_list=[np.float64(0.009426819249988512)], conc_latency_avg_list=[np.float64(0.00814220575108839)]), label=ResultLabel.NORMAL[0m (interface.py:174) (3689)
+2025-06-08 13:18:00,221 | INFO |Task summary: run_id=f8602, task_label=f86022098ee341b8b5fc9f5cbf2ff774 (models.py:375)
+2025-06-08 13:18:00,222 | INFO |DB     | db_label                case              label                            | load_dur    qps         latency(p99)    recall        max_load_count | label (models.py:375)
+2025-06-08 13:18:00,222 | INFO |------ | ----------------------- ----------------- -------------------------------- | ----------- ----------- --------------- ------------- -------------- | ----- (models.py:375)
+2025-06-08 13:18:00,222 | INFO |Milvus | milvus_ivf_cohere_1m    Performance768D1M f86022098ee341b8b5fc9f5cbf2ff774 | 0.0         122.5257    0.0097          0.9026        0              | :)    (models.py:375)
+2025-06-08 13:18:00,222 | [92mINFO[0m: [92mwrite results to disk /home/zebin/2025-vectordb-bench-new/VectorDBBench-dev/vectordb_bench/results/Milvus/result_20250608_f86022098ee341b8b5fc9f5cbf2ff774_milvus.json[0m (models.py:243) (3689)
+2025-06-08 13:18:00,224 | [92mINFO[0m: [92mSuccess to finish task: label=f86022098ee341b8b5fc9f5cbf2ff774, run_id=f86022098ee341b8b5fc9f5cbf2ff774[0m (interface.py:213) (3689)

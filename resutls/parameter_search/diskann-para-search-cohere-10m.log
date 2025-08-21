@@ -1,0 +1,8 @@
+[INFO] Starting parameter search for diskann k-probe...
+[INFO] min searchlist = 10
+[INFO] max searchlist = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --db-label milvus_diskann_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19540 --password ""  --search-list 10 > results-diskann-para-search-searchlist-Performance768D10M/diskann-para-search-Performance768D10M-searchlist-10.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvusdiskann --skip-drop-old --skip-load --db-label milvus_diskann_cohere_10m --case-type Performance768D10M --k 10 --num-concurrency 1 --uri http://localhost:19540 --password ""  --search-list 100 > results-diskann-para-search-searchlist-Performance768D10M/diskann-para-search-Performance768D10M-searchlist-100.txt 2>&1
+[RESULT] searchlist = 10, recall = 0.927
+[RESULT] searchlist = 100, recall = 0.9926
+searchlist 10 already meets the target recall of 0.9. No further search needed.

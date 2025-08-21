@@ -1,0 +1,36 @@
+[INFO] Starting parameter search for HNSW efsearch...
+[INFO] min efsearch = 10
+[INFO] max efsearch = 100
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 10 > results-hnsw-para-search-efsearch-Performance768D1M/hnsw-para-search-Performance768D1M-efsearch-10.txt 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 100 > results-hnsw-para-search-efsearch-Performance768D1M/hnsw-para-search-Performance768D1M-efsearch-100.txt 2>&1
+[RESULT] efsearch = 10, recall = 0.7785
+[RESULT] efsearch = 100, recall = 0.9652
+[INFO] Testing efsearch = 55
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 55 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-55.txt 2>&1
+[RESULT] efsearch = 55, recall = 0.9452
+[INFO] Testing efsearch = 32
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 32 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-32.txt 2>&1
+[RESULT] efsearch = 32, recall = 0.9152
+[INFO] Testing efsearch = 21
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 21 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-21.txt 2>&1
+[RESULT] efsearch = 21, recall = 0.8809
+[INFO] evaluate efsearch_min = cur_efsearch + 1 = 22
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 22 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-22.txt 2>&1
+[RESULT] efsearch_min = 22, recall = 0.8846
+[INFO] Testing efsearch = 27
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 27 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-27.txt 2>&1
+[RESULT] efsearch = 27, recall = 0.9012
+[INFO] Testing efsearch = 24
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 24 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-24.txt 2>&1
+[RESULT] efsearch = 24, recall = 0.8924
+[INFO] evaluate efsearch_min = cur_efsearch + 1 = 25
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 25 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-25.txt 2>&1
+[RESULT] efsearch_min = 25, recall = 0.8951
+[INFO] Testing efsearch = 26
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 26 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-26.txt 2>&1
+[RESULT] efsearch = 26, recall = 0.8987
+[INFO] evaluate efsearch_min = cur_efsearch + 1 = 27
+/home/zebin/anaconda3/envs/vectordb-bench/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --db-label milvus_hnsw_cohere_1m --case-type Performance768D1M --k 10 --num-concurrency 1 --uri http://localhost:19535 --password "" --m 16 --ef-construction 200 --ef-search 27 > results-hnsw-para-search-efsearch-Performance768D1M/ivf-para-search-Performance768D1M-efsearch-27.txt 2>&1
+[RESULT] efsearch_min = 27, recall = 0.9012
+[INFO] Final efsearch value: efsearch = 27, recall = 0.9012
+[INFO] Final efsearch value: efsearch = 27, recall = 0.9012

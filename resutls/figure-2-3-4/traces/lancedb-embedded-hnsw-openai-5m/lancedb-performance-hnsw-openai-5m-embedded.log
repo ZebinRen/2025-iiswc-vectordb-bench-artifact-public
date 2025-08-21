@@ -1,0 +1,255 @@
+nr_file_pages 445861
+1
+nr_file_pages 142064
+nr_file_pages 2343055
+1
+nr_file_pages 142219
+nr_file_pages 2343733
+1
+nr_file_pages 142087
+nr_file_pages 2343735
+1
+nr_file_pages 142037
+nr_file_pages 2343761
+1
+nr_file_pages 142879
+nr_file_pages 2442420
+1
+nr_file_pages 144844
+nr_file_pages 2348314
+1
+nr_file_pages 144638
+Result directory already exists: results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output
+Result directory already exists: results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace
+Result directory already exists: results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace
+Result directory already exists: results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1nr_file_pages 2349767
+1
+nr_file_pages 144478
+nr_file_pages 2347490
+1
+nr_file_pages 144603
+nr_file_pages 2345267
+1
+nr_file_pages 144635
+nr_file_pages 2346661
+1
+nr_file_pages 144596
+nr_file_pages 2349756
+1
+nr_file_pages 144650
+nr_file_pages 2349726
+1
+nr_file_pages 144614
+
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1nr_file_pages 2348262
+1
+nr_file_pages 144658
+nr_file_pages 2350585
+1
+nr_file_pages 144622
+nr_file_pages 2348983
+1
+nr_file_pages 144700
+nr_file_pages 2348210
+1
+nr_file_pages 144664
+nr_file_pages 2349833
+1
+nr_file_pages 145787
+nr_file_pages 2350090
+1
+nr_file_pages 145672
+nr_file_pages 2349315
+1
+nr_file_pages 145719
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbhnsw --skip-drop-old --skip-load --skip-search-serial --case-type Performance1536D5M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-hnsw-openai-5m --m 16 --ef-construction 200 --ef 38 > results-performance/lancedb-embedded-hnsw-openai-5m/lancedb-embedded-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-ef-38-rep-4.log 2>&1
+Results:
+QPS:  {1: [14.3067, 14.1943, 14.504, 14.8245, 14.1879], 2: [29.5817, 30.6202, 29.9659, 30.3651, 30.8335], 4: [72.4858, 72.8874, 69.1441, 70.8928, 69.9566], 8: [374.058, 380.1834, 354.0313, 342.4802, 398.8727]}
+Latency:  {1: [0.0, 0.0, 0.0, 0.0, 0.0], 2: [0.0, 0.0, 0.0, 0.0, 0.0], 4: [0.0, 0.0, 0.0, 0.0, 0.0], 8: [0.0, 0.0, 0.0, 0.0, 0.0]}
+Recall:  {1: [0.0, 0.0, 0.0, 0.0, 0.0], 2: [0.0, 0.0, 0.0, 0.0, 0.0], 4: [0.0, 0.0, 0.0, 0.0, 0.0], 8: [0.0, 0.0, 0.0, 0.0, 0.0]}
+Average:
+QPS Average: [14.403479999999998, 30.27328, 71.07333999999999, 369.92512]
+QPS Std Dev: [0.23956606103536454, 0.4506431421868082, 1.4344006993863345, 19.829838837005205]
+Latency Average: [0.0, 0.0, 0.0, 0.0]
+Latency Std Dev: [0.0, 0.0, 0.0, 0.0]
+Recall Average: [0.0, 0.0, 0.0, 0.0]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 14.40 ± 0.24
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+concurrency=2:
+  QPS: 30.27 ± 0.45
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+concurrency=4:
+  QPS: 71.07 ± 1.43
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+concurrency=8:
+  QPS: 369.93 ± 19.83
+  Latency: 0.00 ± 0.00
+  Recall: 0.00 ± 0.00
+TYPE 1 FONTS ENABLED
+Created result directory: figures-performance/lancedb-hnsw-openai-5m

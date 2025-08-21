@@ -1,0 +1,551 @@
+nohup: ignoring input
+nr_file_pages 7928880
+1
+nr_file_pages 118457
+nr_file_pages 188612
+1
+nr_file_pages 119284
+nr_file_pages 179707
+1
+nr_file_pages 119210
+nr_file_pages 186955
+1
+nr_file_pages 119234
+nr_file_pages 187006
+1
+nr_file_pages 119247
+nr_file_pages 186932
+1
+nr_file_pages 119549
+nr_file_pages 179908
+1
+nr_file_pages 119444
+Result directory already exists: results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output
+Result directory already exists: results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace
+Result directory already exists: results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace
+Result directory already exists: results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 1 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 1 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 1 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 1 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 1 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-1-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 2 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+nr_file_pages 187182
+1
+nr_file_pages 119462
+nr_file_pages 188286
+1
+nr_file_pages 119437
+nr_file_pages 187203
+1
+nr_file_pages 119874
+nr_file_pages 180260
+1
+nr_file_pages 119723
+nr_file_pages 187270
+1
+nr_file_pages 119648
+nr_file_pages 187397
+1
+nr_file_pages 119648
+nr_file_pages 187340
+1
+nr_file_pages 119822
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 2 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 2 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 2 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 2 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-2-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 4 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 4 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 4 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+nr_file_pages 180460
+1
+nr_file_pages 119597
+nr_file_pages 187150
+1
+nr_file_pages 119641
+nr_file_pages 188234
+1
+nr_file_pages 119667
+nr_file_pages 187546
+1
+nr_file_pages 119667
+nr_file_pages 187255
+1
+nr_file_pages 119858
+nr_file_pages 180413
+1
+nr_file_pages 119798
+nr_file_pages 187479
+1
+nr_file_pages 119711
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 4 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 4 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-4-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 8 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 8 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 8 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 8 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 8 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-8-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+nr_file_pages 187605
+1
+nr_file_pages 119733
+nr_file_pages 187744
+1
+nr_file_pages 119780
+nr_file_pages 188511
+1
+nr_file_pages 119702
+nr_file_pages 187578
+1
+nr_file_pages 119823
+nr_file_pages 187628
+1
+nr_file_pages 119875
+nr_file_pages 187639
+1
+nr_file_pages 120007
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 16 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 16 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 16 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 16 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 16 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-16-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 32 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 32 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+nr_file_pages 180617
+1
+nr_file_pages 119887
+nr_file_pages 187712
+1
+nr_file_pages 119833
+nr_file_pages 187430
+1
+nr_file_pages 119927
+nr_file_pages 188630
+1
+nr_file_pages 119902
+nr_file_pages 187562
+1
+nr_file_pages 119842
+nr_file_pages 187704
+1
+nr_file_pages 119906
+nr_file_pages 187995
+1
+nr_file_pages 119762
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 32 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 32 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 32 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-32-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 64 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 64 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 64 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+nr_file_pages 187709
+1
+nr_file_pages 119831
+nr_file_pages 187599
+1
+nr_file_pages 119962
+nr_file_pages 188634
+1
+nr_file_pages 119977
+nr_file_pages 187758
+1
+nr_file_pages 119879
+nr_file_pages 187601
+1
+nr_file_pages 119880
+nr_file_pages 187792
+1
+nr_file_pages 119811
+nr_file_pages 189227
+1
+nr_file_pages 119935
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 64 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 64 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-64-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 128 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 128 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 128 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 128 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 128 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-128-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+nr_file_pages 188662
+1
+nr_file_pages 119816
+nr_file_pages 187763
+1
+nr_file_pages 119926
+nr_file_pages 187653
+1
+nr_file_pages 119897
+nr_file_pages 187891
+1
+nr_file_pages 119892
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 256 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 256 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 256 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 256 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-cpu-trace/cpu-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-mem-trace/mem-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-page-cache-trace/page-caceh-trace-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench milvushnsw --skip-drop-old --skip-load --case-type Performance1536D5M  --db-label milvus_hnsw_openai_5m --k 10 --num-concurrency 256 --uri http://localhost:19538 --password '' --m 16 --ef-construction 200 --ef-search 10 > results-performance/milvus-hnsw-openai-5m/milvus-hnsw-openai-5m-output/vdb-bench-openai-5m-con-256-k-10-m-16-efconstruct-200-efsearch-10-rep-4.log 2>&1
+Results:
+QPS:  {1: [413.7232, 422.9817, 420.3257, 422.45, 421.6966], 2: [707.3646, 705.7432, 697.0163, 697.1623, 696.661], 4: [985.0891, 986.5895, 982.968, 988.396, 893.7563], 8: [1143.029, 1143.4457, 1142.8399, 1140.9692, 1139.6886], 16: [1351.4354, 1356.2619, 1347.215, 1227.3122, 1344.7963], 32: [1467.0048, 1514.6245, 1365.848, 1460.373, 1497.5082], 64: [1517.6625, 1503.564, 1506.6835, 1522.7068, 1519.6232], 128: [1509.2607, 1504.8102, 1373.0871, 1384.2741, 1524.473], 256: [1408.4737, 1550.1027, 1565.9642, 1409.2755, 1416.1491]}
+Latency:  {1: [3.0, 3.0, 3.0, 2.9, 2.9], 2: [3.0, 2.9, 2.9, 3.1, 3.2], 4: [3.0, 2.8, 3.0, 2.9, 3.4], 8: [3.0, 3.1, 3.0, 3.0, 3.0], 16: [3.3, 3.0, 3.0, 3.0, 2.9], 32: [2.9, 3.0, 2.9, 3.0, 2.9], 64: [2.8, 3.1, 3.1, 3.2, 3.1], 128: [2.9, 2.8, 2.9, 2.8, 2.9], 256: [2.8, 3.0, 3.0, 2.8, 2.9]}
+Recall:  {1: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 2: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 4: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 8: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 16: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 32: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 64: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 128: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077], 256: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077]}
+Average:
+QPS Average: [420.23544000000004, 700.78948, 967.35978, 1141.9944799999998, 1325.40416, 1461.0717, 1514.048, 1459.18102, 1469.99304]
+QPS Std Dev: [3.376347885274845, 4.737282217221193, 36.844870119211976, 1.4324306439056715, 49.2008658984209, 51.57279092521559, 7.526917018009367, 66.1456707480512, 72.10886202052]
+Latency Average: [2.96, 3.0200000000000005, 3.0200000000000005, 3.02, 3.04, 2.9400000000000004, 3.0599999999999996, 2.86, 2.9000000000000004]
+Latency Std Dev: [0.048989794855663606, 0.11661903789690611, 0.20396078054371142, 0.040000000000000036, 0.1356465996625053, 0.048989794855663606, 0.13564659966250547, 0.048989794855663606, 0.08944271909999167]
+Recall Average: [0.9077, 0.9077, 0.9077, 0.9077, 0.9077, 0.9077, 0.9077, 0.9077, 0.9077]
+Recall Std Dev: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Detailed Results:
+concurrency=1:
+  QPS: 420.24 ± 3.38
+  Latency: 2.96 ± 0.05
+  Recall: 0.91 ± 0.00
+concurrency=2:
+  QPS: 700.79 ± 4.74
+  Latency: 3.02 ± 0.12
+  Recall: 0.91 ± 0.00
+concurrency=4:
+  QPS: 967.36 ± 36.84
+  Latency: 3.02 ± 0.20
+  Recall: 0.91 ± 0.00
+concurrency=8:
+  QPS: 1141.99 ± 1.43
+  Latency: 3.02 ± 0.04
+  Recall: 0.91 ± 0.00
+concurrency=16:
+  QPS: 1325.40 ± 49.20
+  Latency: 3.04 ± 0.14
+  Recall: 0.91 ± 0.00
+concurrency=32:
+  QPS: 1461.07 ± 51.57
+  Latency: 2.94 ± 0.05
+  Recall: 0.91 ± 0.00
+concurrency=64:
+  QPS: 1514.05 ± 7.53
+  Latency: 3.06 ± 0.14
+  Recall: 0.91 ± 0.00
+concurrency=128:
+  QPS: 1459.18 ± 66.15
+  Latency: 2.86 ± 0.05
+  Recall: 0.91 ± 0.00
+concurrency=256:
+  QPS: 1469.99 ± 72.11
+  Latency: 2.90 ± 0.09
+  Recall: 0.91 ± 0.00
+TYPE 1 FONTS ENABLED
+Result directory already exists: figures-performance/milvus-hnsw-openai-5m

@@ -1,0 +1,507 @@
+nr_file_pages 157711
+1
+nr_file_pages 51110
+nr_file_pages 158760
+1
+nr_file_pages 51078
+nr_file_pages 158809
+1
+nr_file_pages 51121
+nr_file_pages 158181
+1
+nr_file_pages 51098
+nr_file_pages 159963
+1
+nr_file_pages 51065
+nr_file_pages 160066
+1
+nr_file_pages 51138
+nr_file_pages 189876
+1
+nr_file_pages 51095
+Result directory already exists: results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output
+Result directory already exists: results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace
+Result directory already exists: results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace
+Result directory already exists: results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 1 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1nr_file_pages 190888
+1
+nr_file_pages 51143
+nr_file_pages 188412
+1
+nr_file_pages 51090
+nr_file_pages 189473
+1
+nr_file_pages 51049
+nr_file_pages 188100
+1
+nr_file_pages 51130
+nr_file_pages 239027
+1
+nr_file_pages 51116
+nr_file_pages 226436
+1
+nr_file_pages 51109
+
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 2 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-2-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1nr_file_pages 216847
+1
+nr_file_pages 51079
+nr_file_pages 242331
+1
+nr_file_pages 51189
+nr_file_pages 210857
+1
+nr_file_pages 51172
+nr_file_pages 296824
+1
+nr_file_pages 51194
+nr_file_pages 295985
+1
+nr_file_pages 51204
+nr_file_pages 303050
+1
+nr_file_pages 51313
+nr_file_pages 369818
+1
+nr_file_pages 137018
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 4 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-4-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 8 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-8-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1nr_file_pages 384531
+1
+nr_file_pages 137124
+nr_file_pages 414715
+1
+nr_file_pages 137022
+nr_file_pages 417398
+1
+nr_file_pages 136920
+nr_file_pages 417682
+1
+nr_file_pages 136962
+nr_file_pages 424191
+1
+nr_file_pages 137060
+nr_file_pages 412313
+1
+nr_file_pages 137040
+nr_file_pages 424816
+1
+nr_file_pages 137081
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 16 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 16 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 16 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 16 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 16 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-16-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 32 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1nr_file_pages 428515
+1
+nr_file_pages 137062
+nr_file_pages 429765
+1
+nr_file_pages 137028
+nr_file_pages 420021
+1
+nr_file_pages 137163
+nr_file_pages 420818
+1
+nr_file_pages 137073
+nr_file_pages 424184
+1
+nr_file_pages 137089
+nr_file_pages 420681
+1
+nr_file_pages 137095
+nr_file_pages 426699
+1
+nr_file_pages 137186
+
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 32 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 32 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 32 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 32 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-32-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 64 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 64 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 64 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1nr_file_pages 424236
+1
+nr_file_pages 137143
+nr_file_pages 417282
+1
+nr_file_pages 137169
+nr_file_pages 423211
+1
+nr_file_pages 137172
+nr_file_pages 417208
+1
+nr_file_pages 137136
+nr_file_pages 420034
+1
+nr_file_pages 137227
+nr_file_pages 424778
+1
+nr_file_pages 137217
+
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 64 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 64 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-64-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 128 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 128 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 128 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 128 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 128 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-128-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1nr_file_pages 423288
+1
+nr_file_pages 137341
+nr_file_pages 423465
+1
+nr_file_pages 137179
+nr_file_pages 422648
+1
+nr_file_pages 137330
+nr_file_pages 422378
+1
+nr_file_pages 137465
+nr_file_pages 423614
+1
+nr_file_pages 137451
+
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 256 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-0.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 256 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-1.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 256 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-2.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 256 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-3.log 2>&1
+Clean page cache, number of pages before clean:grep -w nr_file_pages /proc/vmstat
+sync
+echo 1 | sudo tee /proc/sys/vm/drop_caches
+Clean page cache, number of pages after clean:grep -w nr_file_pages /proc/vmstat
+mpstat 1 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-cpu-trace/cpu-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/mem-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-mem-trace/mem-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+bash utils/pagecache-per-sec.sh > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-page-cache-trace/page-caceh-trace-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+/home/zebin/anaconda3/envs/vectordb-bench-new/bin/vectordbbench lancedbivfpq --skip-drop-old --skip-load --skip-search-serial --case-type Performance768D10M --k 10 --num-concurrency 256 --uri /mnt/vectordb/nvme0n1/lancedb/lancedb-ivfpq-cohere-10m --num-partitions 12648 --nprobes 17 > results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-256-k-10-nlist-12648-kprobe-17-rep-4.log 2>&1
+Error: Missing metrics qps, serial_latency_p99, recall in results-performance/lancedb-embedded-ivf-cohere-10m/lancedb-embedded-ivf-cohere-10m-output/vdb-bench-cohere-10m-con-1-k-10-nlist-12648-kprobe-17-rep-0.log
+Traceback (most recent call last):
+  File "/home/zebin/2025-vectordb-bench-new/lancedb-ivfpq-perf.py", line 226, in <module>
+    vectordb_perf = parse.parse_vectordb_bench_output(vdb_bench_output_path)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zebin/2025-vectordb-bench-new/parse.py", line 86, in parse_vectordb_bench_output
+    raise ValueError("Required metrics not found in log file.")
+ValueError: Required metrics not found in log file.
