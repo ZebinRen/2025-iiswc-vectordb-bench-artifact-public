@@ -57,7 +57,7 @@ whereis python /home/zebin/anaconda3/envs/vectordb-bench/bin/python
 >> /home/zebin/anaconda3/envs/vectordb-bench-new/bin/python  # Example output
 
 # Install VectorDBBench and dependencies
-git clone git@github.com:ZebinRen/VectorDBBench-dev.git
+git clone https://github.com/ZebinRen/VectorDBBench-dev.git
 cd VectorDBBench-dev
 git checkout origin/benchmark-paper
 pip install -e .
