@@ -178,7 +178,7 @@ mkdir qdrant-hnsw-mem-openai-5m
 Start docker containers
 
 ```bash
-docker pull qdrant/qdrant
+docker pull qdrant/qdrant:latest
 ## Start Qdrant docker container
 sudo docker run -d --name qdrant-hnsw-mem-cohere-1m -p 6333:6333 -p 6334:6334  -v "${DATA_ROOT}/qdrant/qdrant-hnsw-mem-cohere-1m:/qdrant/storage:z"  qdrant/qdrant
 sudo docker run -d --name qdrant-hnsw-mem-cohere-10m -p 6335:6333 -p 6336:6334  -v "${DATA_ROOT}/qdrant/qdrant-hnsw-mem-cohere-10m:/qdrant/storage:z"  qdrant/qdrant
