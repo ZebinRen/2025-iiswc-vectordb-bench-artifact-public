@@ -72,6 +72,11 @@ pip install lancedb pandas
 
 [docker](https://docs.docker.com/engine/install/ubuntu/)
 
+```bash
+# required for CPU trace
+sudo apt install sysstat
+```
+
 ## Set Up VectorDBs and Prepare the Indexes
 
 Clone this repository:
